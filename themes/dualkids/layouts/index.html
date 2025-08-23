@@ -14,9 +14,19 @@
           {{ $book := . }}
           <a class="book-card" href="{{ .RelPermalink }}" style="--cover: {{ or .Params.coverColor site.Params.primaryColor }};">
             <div class="book-card-inner">
+              <div class="book-card-media">
+                {{ with .Params.cover }}
+                  <img class="book-card-cover" src="{{ . | relURL }}" alt="Cover of {{ $book.Title }}" />
+                {{ else }}
+                  <div class="book-card-cover placeholder" aria-hidden="true">📘</div>
+                {{ end }}
+              </div>
               <h3 class="book-title">{{ .Title }}</h3>
               {{ with .Params.author }}<p class="book-author">by {{ . }}</p>{{ end }}
-              {{ with .Params.status }}<span class="status status-{{ . }}">{{ . }}</span>{{ end }}
+              <div class="badges">
+                {{ with .Params.status }}<span class="badge status status-{{ . }}">{{ . }}</span>{{ end }}
+                {{ if .Params.featured }}<span class="badge badge-featured">Featured</span>{{ end }}
+              </div>
               {{ with .Params.plannedChapters }}
                 {{ $count := len $book.Pages }}
                 <p class="progress">Chapters: {{ $count }} / {{ . }}</p>

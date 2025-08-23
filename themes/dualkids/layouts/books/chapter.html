@@ -1,7 +1,16 @@
 {{ define "main" }}
   <article class="chapter">
     <header class="chapter-header" style="--cover: {{ or .Parent.Params.coverColor site.Params.primaryColor }};">
-      <a class="back-link" href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a>
+      <div class="chapter-header-top">
+        <a class="back-link" href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a>
+        <div class="chapter-cover">
+          {{ with .Parent.Params.cover }}
+            <img class="book-cover tiny" src="{{ . | relURL }}" alt="Cover" />
+          {{ else }}
+            <div class="book-cover tiny placeholder" aria-hidden="true">📘</div>
+          {{ end }}
+        </div>
+      </div>
       <h1 class="chapter-title">{{ .Title }}</h1>
       {{ partial "reading-controls.html" . }}
     </header>
@@ -19,4 +28,3 @@
     </footer>
   </article>
 {{ end }}
-
