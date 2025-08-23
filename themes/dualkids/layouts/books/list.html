@@ -15,27 +15,15 @@
             "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
           }}
           {{ $gradient := index $gradients (mod $index (len $gradients)) }}
-          <a class="book-card" href="{{ .RelPermalink }}" style="--cover-bg: {{ or .Params.coverColor $gradient }};">
-            <div class="book-card-inner">
-              <div class="book-card-media">
-                {{ with .Params.cover }}
-                  <img class="book-card-cover" src="{{ . | relURL }}" alt="Cover of {{ $book.Title }}" />
-                {{ else }}
-                  <div class="book-card-cover placeholder" aria-label="Book cover"></div>
-                {{ end }}
-              </div>
-              <div class="book-card-content">
-                <h3 class="book-title">{{ .Title }}</h3>
-                {{ with .Params.author }}<p class="book-author">by {{ . }}</p>{{ end }}
-                <div class="badges">
-                  {{ with .Params.status }}<span class="badge status status-{{ . }}">{{ . }}</span>{{ end }}
-                  {{ if .Params.featured }}<span class="badge badge-featured">Featured</span>{{ end }}
-                </div>
-                {{ with .Params.plannedChapters }}
-                  {{ $count := len $book.Pages }}
-                  <p class="progress">Chapters: {{ $count }} / {{ . }}</p>
-                {{ end }}
-              </div>
+          <a class="book-card" href="{{ .RelPermalink }}" {{ if not .Params.cover }}style="--cover-bg: {{ or .Params.coverColor $gradient }};"{{ end }}>
+            {{ with .Params.cover }}
+              <img class="book-card-cover" src="{{ . }}" alt="Cover of {{ $book.Title }}" loading="lazy" />
+            {{ else }}
+              <div class="book-card-cover placeholder" aria-label="Book cover"></div>
+            {{ end }}
+            <div class="book-card-info">
+              <h3 class="book-title">{{ .Title }}</h3>
+              {{ with .Params.author }}<p class="book-author">by {{ . }}</p>{{ end }}
             </div>
           </a>
         {{ end }}
@@ -44,10 +32,10 @@
   {{ else }}
     <article class="book">
       {{ partial "breadcrumbs.html" . }}
-      <header class="book-header" style="--cover: {{ or .Params.coverColor site.Params.primaryColor }};">
-        <div class="book-header-media">
+      <header class="book-header">
+        <div class="book-header-media" style="--cover: {{ or .Params.coverColor site.Params.primaryColor }};">
           {{ with .Params.cover }}
-            <img class="book-cover" src="{{ . | relURL }}" alt="Cover of {{ $.Title }}" />
+            <img class="book-cover" src="{{ . }}" alt="Cover of {{ $.Title }}" />
           {{ else }}
             <div class="book-cover placeholder" aria-label="Book cover"></div>
           {{ end }}

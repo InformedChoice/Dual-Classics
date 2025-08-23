@@ -10,27 +10,27 @@
     <h2 class="section-title">Books</h2>
     <div class="grid">
       {{ with site.GetPage "section" "books" }}
-        {{ range .Sections.ByTitle }}
-          {{ $book := . }}
-          <a class="book-card" href="{{ .RelPermalink }}" style="--cover: {{ or .Params.coverColor site.Params.primaryColor }};">
-            <div class="book-card-inner">
-              <div class="book-card-media">
-                {{ with .Params.cover }}
-                  <img class="book-card-cover" src="{{ . | relURL }}" alt="Cover of {{ $book.Title }}" />
-                {{ else }}
-                  <div class="book-card-cover placeholder" aria-hidden="true">📘</div>
-                {{ end }}
-              </div>
+        {{ range $index, $book := .Sections.ByTitle }}
+          {{ $gradients := slice 
+            "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+            "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+            "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
+            "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+            "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
+            "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
+            "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
+            "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+          }}
+          {{ $gradient := index $gradients (mod $index (len $gradients)) }}
+          <a class="book-card" href="{{ .RelPermalink }}" {{ if not .Params.cover }}style="--cover-bg: {{ or .Params.coverColor $gradient }};"{{ end }}>
+            {{ with .Params.cover }}
+              <img class="book-card-cover" src="{{ . }}" alt="Cover of {{ $book.Title }}" loading="lazy" />
+            {{ else }}
+              <div class="book-card-cover placeholder" aria-label="Book cover"></div>
+            {{ end }}
+            <div class="book-card-info">
               <h3 class="book-title">{{ .Title }}</h3>
               {{ with .Params.author }}<p class="book-author">by {{ . }}</p>{{ end }}
-              <div class="badges">
-                {{ with .Params.status }}<span class="badge status status-{{ . }}">{{ . }}</span>{{ end }}
-                {{ if .Params.featured }}<span class="badge badge-featured">Featured</span>{{ end }}
-              </div>
-              {{ with .Params.plannedChapters }}
-                {{ $count := len $book.Pages }}
-                <p class="progress">Chapters: {{ $count }} / {{ . }}</p>
-              {{ end }}
             </div>
           </a>
         {{ end }}

@@ -8,7 +8,7 @@ reading_level = "middle"
 mode = "bilingual"
 featured = true
 summary = "A bilingual, simplified family edition of Thomas Paine’s call for liberty."
-cover = "/images/common-sense-cover.jpg"
+cover = "https://imagedelivery.net/uoQWLs2DQGCKz-4i8TTorQ/9b620c90-9400-47ce-91b9-54e5cc7f5d00/public"
 [cascade]
   type = "books"
   mode = "bilingual"
