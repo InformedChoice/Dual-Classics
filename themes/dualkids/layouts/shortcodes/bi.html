@@ -1,0 +1,19 @@
+{{/* Bilingual inline shortcode with attributes
+Usage:
+  {{< bi en="English text" es="Texto en español" >}}
+*/}}
+{{- $en := .Get "en" | markdownify -}}
+{{- $es := .Get "es" | markdownify -}}
+<div class="bp">
+  <div class="lang lang-en">
+    <div class="lang-label">English</div>
+    <div class="p">{{ $en }}</div>
+  </div>
+  {{ if $es }}
+  <div class="lang lang-es">
+    <div class="lang-label">Español</div>
+    <div class="p">{{ $es }}</div>
+  </div>
+  {{ end }}
+</div>
+

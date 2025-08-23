@@ -58,6 +58,12 @@ Texto en español.
 
 On chapter pages, use the language buttons to show EN only, ES only, or both. Kids can also bump text size with A− / A+.
 
+Alternatively, use the `bi` shortcode with attributes (good for short lines):
+
+```
+{{< bi en="English sentence." es="Oración en español." >}}
+```
+
 ## Archetypes
 
 - New book: `hugo new books/<slug>/_index.md`

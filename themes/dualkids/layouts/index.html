@@ -18,7 +18,7 @@
               {{ with .Params.author }}<p class="book-author">by {{ . }}</p>{{ end }}
               {{ with .Params.status }}<span class="status status-{{ . }}">{{ . }}</span>{{ end }}
               {{ with .Params.plannedChapters }}
-                {{ $count := len (where $book.Pages "Params.chapter" "gt" 0) }}
+                {{ $count := len $book.Pages }}
                 <p class="progress">Chapters: {{ $count }} / {{ . }}</p>
               {{ end }}
             </div>

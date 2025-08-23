@@ -16,8 +16,9 @@ This repo hosts a custom Hugo site for kid‑friendly, bilingual (EN + ES) class
 - Add chapters as you go:
   - `hugo new books/<slug>/<nn>-chapter-<n>.md`
   - Set `chapter` and `weight` to `<n>`.
-  - Add content with bilingual paragraphs using the `bp` shortcode:
-    - `{{< bp >}} EN text --- ES text {{< /bp >}}`
+  - Add content with bilingual paragraphs using:
+    - Block form: `{{< bp >}} EN text --- ES text {{< /bp >}}`
+    - Inline form: `{{< bi en="EN text" es="ES text" >}}`
 
 2) Style tweaks
 - Edit `themes/dualkids/assets/css/main.css` for colors/spacing.
