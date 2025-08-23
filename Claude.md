@@ -11,13 +11,15 @@ This repo hosts a custom Hugo site for kid‑friendly, bilingual (EN + ES) class
 
 1. Add a new book
 
-- Create book folder and index:
+- **See ADD_NEW_BOOK.md for detailed instructions with examples**
+- Quick steps:
   - `hugo new books/<slug>/_index.md`
-  - Fill front matter: `title`, `author`, `translator`, `status`, `plannedChapters`, optional `coverColor`, `description`.
-- Add chapters as you go:
+  - Add cover image URL or leave blank for styled placeholder
+  - Fill front matter: `title`, `author`, `cover`, `status`, etc.
+- Add chapters:
   - `hugo new books/<slug>/<nn>-chapter-<n>.md`
-  - Set `chapter` and `weight` to `<n>`.
-  - Add content with bilingual paragraphs using:
+  - Set `chapter` and `weight` to `<n>`
+  - Add bilingual content:
     - Block form: `{{< bp >}} EN text --- ES text {{< /bp >}}`
     - Inline form: `{{< bi en="EN text" es="ES text" >}}`
 
