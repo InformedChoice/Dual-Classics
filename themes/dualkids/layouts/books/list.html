@@ -31,6 +31,7 @@
     </section>
   {{ else }}
     <article class="book">
+      {{ partial "breadcrumbs.html" . }}
       <header class="book-header" style="--cover: {{ or .Params.coverColor site.Params.primaryColor }};">
         <div class="book-header-media">
           {{ with .Params.cover }}

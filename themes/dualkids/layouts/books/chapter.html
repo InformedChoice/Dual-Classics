@@ -1,5 +1,6 @@
 {{ define "main" }}
   <article class="chapter">
+    {{ partial "breadcrumbs.html" . }}
     <header class="chapter-header" style="--cover: {{ or .Parent.Params.coverColor site.Params.primaryColor }};">
       <div class="chapter-header-top">
         <a class="back-link" href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a>

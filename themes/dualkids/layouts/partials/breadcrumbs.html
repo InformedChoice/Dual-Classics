@@ -1,0 +1,20 @@
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ "/" | relURL }}">Home</a>
+  {{ with site.GetPage "section" "books" }}
+    <span class="crumb-sep">›</span>
+    <a href="{{ .RelPermalink }}">Books</a>
+  {{ end }}
+  {{ if .IsSection }}
+    <span class="crumb-sep">›</span>
+    <span aria-current="page">{{ .Title }}</span>
+  {{ else if eq .Section "books" }}
+    <span class="crumb-sep">›</span>
+    <a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>
+    <span class="crumb-sep">›</span>
+    <span aria-current="page">{{ .Title }}</span>
+  {{ else if not .IsHome }}
+    <span class="crumb-sep">›</span>
+    <span aria-current="page">{{ .Title }}</span>
+  {{ end }}
+</nav>
+
