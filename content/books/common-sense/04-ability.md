@@ -1,8 +1,7 @@
 +++
 title = "Chapter 4 – Of the Present Ability of America, with Some Miscellaneous Reflections / Capítulo 4 – De la capacidad actual de América, con algunas reflexiones adicionales"
-layout = "chapter"
 weight = 4
-toc = true
+chapter = 4
 +++
 
 {{< bi en="Some say we are too weak to stand on our own. But that is nonsense. America has everything needed to build her own strength." es="Algunos dicen que somos demasiado débiles para sostenernos por nosotros mismos. Pero eso es un sinsentido. América tiene todo lo necesario para construir su propia fuerza." >}}

@@ -21,5 +21,75 @@
       <guid>http://localhost:1313/books/books/anabasis/chapter-2-march-to-celaenae/</guid>
       <description>Friends join Cyrus. The army grows.</description>
     </item>
+    <item>
+      <title>Chapter 3: The Soldiers&#39; Revolt</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-3-the-soldiers-revolt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-3-the-soldiers-revolt/</guid>
+      <description>The soldiers refuse to march and Clearchus must choose between Cyrus and his men.</description>
+    </item>
+    <item>
+      <title>Chapter 4: Through Syria to the Gates</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-4-through-syria-to-the-gates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-4-through-syria-to-the-gates/</guid>
+      <description>Cyrus marches through Syria and faces fortified passes on his way to confront the king.</description>
+    </item>
+    <item>
+      <title>Chapter 5: Through the Desert</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-5-through-the-desert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-5-through-the-desert/</guid>
+      <description>The army crosses the Arabian desert, hunting wild animals and struggling to find food.</description>
+    </item>
+    <item>
+      <title>Chapter 6: The Traitor Orontas</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-6-the-traitor-orontas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-6-the-traitor-orontas/</guid>
+      <description>A Persian noble tries to betray Cyrus but is caught and put on trial.</description>
+    </item>
+    <item>
+      <title>Chapter 7: The King&#39;s Army Approaches</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-7-the-kings-army-approaches/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-7-the-kings-army-approaches/</guid>
+      <description>The army prepares for battle as the king&amp;rsquo;s forces draw near.</description>
+    </item>
+    <item>
+      <title>Chapter 8: The Battle Begins</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-8-the-battle-begins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-8-the-battle-begins/</guid>
+      <description>The king&amp;rsquo;s army approaches and the Greek soldiers prepare for battle.</description>
+    </item>
+    <item>
+      <title>Chapter 9: The Death of Cyrus</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-9-the-death-of-cyrus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-9-the-death-of-cyrus/</guid>
+      <description>The story of Cyrus&amp;rsquo;s death and remembrance of his noble character.</description>
+    </item>
+    <item>
+      <title>Chapter 10: The March Continues</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-10-the-march-continues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-10-the-march-continues/</guid>
+      <description>The army releases prisoners to move faster and marches with better discipline.</description>
+    </item>
+    <item>
+      <title>Chapter 11: After Cyrus (Book II, Chapter 1)</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-11-after-cyrus-book-ii-chapter-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-11-after-cyrus-book-ii-chapter-1/</guid>
+      <description>The Greek leaders decide their next steps after Cyrus&amp;rsquo;s death and face demands from the king.</description>
+    </item>
+    <item>
+      <title>Chapter 12: The Alliance and Night March (Book II, Chapter 2)</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-12-the-alliance-and-night-march-book-ii-chapter-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-12-the-alliance-and-night-march-book-ii-chapter-2/</guid>
+      <description>The Greeks join forces with Ariaeus and begin their dangerous march through enemy territory.</description>
+    </item>
   </channel>
 </rss>

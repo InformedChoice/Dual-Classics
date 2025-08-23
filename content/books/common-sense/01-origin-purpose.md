@@ -1,8 +1,7 @@
 +++
 title = "Chapter 1 – The Origin and Purpose of Government / Capítulo 1 – El origen y propósito del gobierno"
-layout = "chapter"
 weight = 1
-toc = true
+chapter = 1
 +++
 
 {{< bi en="Society and government are not the same. Society is everything we create together—our friendships, our work, our mutual help. Government is only a tool to protect us from our worst tendencies. Society brings joy; government restrains evil." es="La sociedad y el gobierno no son lo mismo. La sociedad es todo lo que creamos juntos: nuestras amistades, nuestro trabajo, nuestra ayuda mutua. El gobierno es solo una herramienta para protegernos de nuestras peores tendencias. La sociedad trae alegría; el gobierno restringe el mal." >}}

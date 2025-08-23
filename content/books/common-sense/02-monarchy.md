@@ -1,8 +1,7 @@
 +++
 title = "Chapter 2 – Of Monarchy and Hereditary Succession / Capítulo 2 – De la monarquía y la sucesión hereditaria"
-layout = "chapter"
 weight = 2
-toc = true
+chapter = 2
 +++
 
 {{< bi en="Government by kings is foolish and unjust. To say that one man should rule millions simply because of birth is to deny that all men are created equal." es="Gobernar por reyes es tonto e injusto. Decir que un hombre debe gobernar a millones simplemente por nacimiento es negar que todos los hombres son creados iguales." >}}

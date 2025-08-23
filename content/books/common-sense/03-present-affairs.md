@@ -1,8 +1,7 @@
 +++
 title = "Chapter 3 – Thoughts on the Present State of American Affairs / Capítulo 3 – Pensamientos sobre el estado actual de los asuntos en América"
-layout = "chapter"
 weight = 3
-toc = true
+chapter = 3
 +++
 
 {{< bi en="We’ve tried petitions, humble requests, and endless waiting, but nothing has worked. The king has shown us nothing but scorn, and now he has chosen war against us. Since he made that choice, we must face it with courage. The time for arguing is past. The time for action is here." es="Hemos intentado peticiones, súplicas humildes y esperas interminables, pero nada ha funcionado. El rey no nos ha mostrado más que desprecio, y ahora ha elegido la guerra contra nosotros. Ya que él tomó esa decisión, debemos enfrentarla con valentía. El tiempo de discutir ha terminado. El tiempo de actuar ha llegado." >}}

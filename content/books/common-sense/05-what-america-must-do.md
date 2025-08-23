@@ -1,8 +1,7 @@
 +++
 title = "Chapter 5 – What America Must Do Now / Capítulo 5 – Lo que América debe hacer ahora"
-layout = "chapter"
 weight = 5
-toc = true
+chapter = 5
 +++
 
 {{< bi en="Resistance has reached a point where calm talk is no longer enough. Independence isn’t just needed—it’s unavoidable. Yet even as we push forward, we must choose our path carefully, ensuring that the new nation we build is strong, just, and stable." es="La resistencia ha llegado a un punto en el que hablar con calma ya no es suficiente. La independencia no solo es necesaria, es inevitable. Y mientras avanzamos, debemos elegir nuestro camino con cuidado, asegurándonos de que la nueva nación que construyamos sea fuerte, justa y estable." >}}
