@@ -1,0 +1,16 @@
+{{ $chapters := .Parent.Pages.ByWeight }}
+{{ $prev := .PrevInSection }}
+{{ $next := .NextInSection }}
+<div class="chapter-nav">
+  <div class="prev-next">
+    {{ if $prev }}<a class="btn" href="{{ $prev.RelPermalink }}">← {{ $prev.Title }}</a>{{ else }}<span></span>{{ end }}
+    {{ if $next }}<a class="btn" href="{{ $next.RelPermalink }}">{{ $next.Title }} →</a>{{ end }}
+  </div>
+  <label class="jump-label" for="chapter-jump">Jump to chapter:</label>
+  <select id="chapter-jump" class="chapter-select" onchange="if(this.value) location.href=this.value">
+    {{ range $chapters }}
+      <option value="{{ .RelPermalink }}" {{ if eq .RelPermalink $.RelPermalink }}selected{{ end }}>{{ .Title }}</option>
+    {{ end }}
+  </select>
+</div>
+

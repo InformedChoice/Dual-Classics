@@ -1,0 +1,24 @@
+{{/* Bilingual paragraph shortcode
+Usage:
+  {{< bp >}}
+  English text...
+  ---
+  Spanish text...
+  {{< /bp >}}
+*/}}
+{{- $parts := split .Inner "---" -}}
+{{- $en := index $parts 0 | markdownify -}}
+{{- $es := cond (ge (len $parts) 2) (index $parts 1 | markdownify) "" -}}
+<div class="bp">
+  <div class="lang lang-en">
+    <div class="lang-label">English</div>
+    <div class="p">{{ $en }}</div>
+  </div>
+  {{ if $es }}
+  <div class="lang lang-es">
+    <div class="lang-label">Español</div>
+    <div class="p">{{ $es }}</div>
+  </div>
+  {{ end }}
+  </div>
+

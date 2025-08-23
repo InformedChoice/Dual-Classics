@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ "/" | relURL }}">
+      <span class="logo" aria-hidden="true">📚</span>
+      <span class="title">{{ site.Params.brandTitle }}</span>
+    </a>
+    <nav class="site-nav">
+      {{ range site.Menus.main }}
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>
+

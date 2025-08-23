@@ -1,0 +1,49 @@
+{{ define "main" }}
+  {{ if .Sections }}
+    <section class="books-grid">
+      <h1 class="section-title">Books</h1>
+      <div class="grid">
+        {{ range .Sections.ByTitle }}
+          {{ $book := . }}
+          <a class="book-card" href="{{ .RelPermalink }}" style="--cover: {{ or .Params.coverColor site.Params.primaryColor }};">
+            <div class="book-card-inner">
+              <h3 class="book-title">{{ .Title }}</h3>
+              {{ with .Params.author }}<p class="book-author">by {{ . }}</p>{{ end }}
+              {{ with .Params.status }}<span class="status status-{{ . }}">{{ . }}</span>{{ end }}
+              {{ with .Params.plannedChapters }}
+                {{ $count := len (where $book.Pages "Params.chapter" "gt" 0) }}
+                <p class="progress">Chapters: {{ $count }} / {{ . }}</p>
+              {{ end }}
+            </div>
+          </a>
+        {{ end }}
+      </div>
+    </section>
+  {{ else }}
+    <article class="book">
+      <header class="book-header" style="--cover: {{ or .Params.coverColor site.Params.primaryColor }};">
+        <h1 class="book-title">{{ .Title }}</h1>
+        <p class="book-meta">
+          {{ with .Params.author }}<span>by {{ . }}</span>{{ end }}
+          {{ with .Params.status }}<span class="status status-{{ . }}">{{ . }}</span>{{ end }}
+        </p>
+        {{ with .Params.description }}<p class="book-desc">{{ . }}</p>{{ end }}
+        {{ with .Params.plannedChapters }}
+          {{ $count := len (where $.Pages "Params.chapter" "gt" 0) }}
+          <p class="progress">Chapters available: {{ $count }} / {{ . }}</p>
+        {{ end }}
+      </header>
+      <section class="chapters">
+        <h2>Chapters</h2>
+        <ol class="chapter-list">
+          {{ range .Pages.ByWeight }}
+            <li>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ with .Params.summary }}<span class="chapter-summary">— {{ . }}</span>{{ end }}
+            </li>
+          {{ end }}
+        </ol>
+      </section>
+    </article>
+  {{ end }}
+{{ end }}

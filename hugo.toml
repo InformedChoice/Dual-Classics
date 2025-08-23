@@ -1,0 +1,39 @@
+baseURL = "https://<your-username>.github.io/Dual-Classics/"
+languageCode = "en-us"
+title = "Dual Classics"
+theme = "dualkids"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 20
+
+[params]
+  brandTitle = "Dual Classics"
+  brandTagline = "Classic stories in simple English + Español"
+  primaryColor = "#FF6B6B"      # watermelon
+  secondaryColor = "#4ECDC4"    # teal
+  accentColor = "#FFE66D"       # sunny yellow
+  footerNote = "Public domain classics, retold for kids."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[permalinks]
+  books = "/books/:sections/:slug/"
+
+[outputs]
+  home = ["HTML"]
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[menu]
+  [[menu.main]]
+    name = "Books"
+    url = "/books/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
