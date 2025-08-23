@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/Dual-Classics/books/books/anabasis/chapter-1-cyrus-and-the-king/</loc>
+    <loc>http://localhost:1313/books/books/anabasis/chapter-1-cyrus-and-the-king/</loc>
   </url><url>
-    <loc>http://localhost:1313/Dual-Classics/books/books/anabasis/chapter-2-march-to-celaenae/</loc>
+    <loc>http://localhost:1313/books/books/anabasis/chapter-2-march-to-celaenae/</loc>
   </url><url>
-    <loc>http://localhost:1313/Dual-Classics/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/Dual-Classics/books/anabasis/</loc>
+    <loc>http://localhost:1313/books/anabasis/</loc>
   </url><url>
-    <loc>http://localhost:1313/Dual-Classics/books/</loc>
+    <loc>http://localhost:1313/books/</loc>
   </url><url>
-    <loc>http://localhost:1313/Dual-Classics/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/Dual-Classics/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/Dual-Classics/</loc>
+    <loc>http://localhost:1313/</loc>
   </url>
 </urlset>
