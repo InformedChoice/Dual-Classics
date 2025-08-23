@@ -76,13 +76,34 @@ The archetypes in `archetypes/books/` prefill front matter and a bilingual parag
 - Styles: `themes/dualkids/assets/css/main.css`, compiled via Hugo Pipes.
 - JS: `static/js/main.js` manages language + font controls.
 
-## Deploy to GitHub Pages
+## Deploy options
+
+### Cloudflare Pages (dualclassics.com)
+
+Recommended if your DNS is on Cloudflare.
+
+- Connect repo: Cloudflare Dashboard → Pages → Create project → Connect to Git → pick this repo and `main` branch.
+- Framework preset: Hugo
+- Build settings:
+  - Build command: `hugo --gc --minify`
+  - Output directory: `public`
+  - Environment variables:
+    - `HUGO_VERSION`: `0.143.1`
+    - `HUGO_ENV`: `production`
+    - `HUGO_BASEURL`: `${CF_PAGES_URL}`
+      - This sets the correct base URL for previews and production automatically.
+- Custom domain: In the project → Custom domains → Add `dualclassics.com` (and optionally `www.dualclassics.com`). Set the apex as Primary domain so `www` redirects to it.
+- DNS: Since your DNS is already on Cloudflare, Pages can add the CNAME records for you.
+
+Tip: If you switch to Cloudflare Pages, you can disable the GitHub Pages workflow in `.github/workflows/gh-pages.yml` to avoid duplicate deploys.
+
+### GitHub Pages
 
 1. Create a GitHub repo named `Dual-Classics` (or use your existing one).
 2. Push this code to the `main` branch.
 3. In GitHub → Settings → Pages, choose "Deploy from a branch" and set branch `gh-pages` once it exists (after first deploy). Or leave it and rely on the workflow to publish.
 4. The workflow `.github/workflows/gh-pages.yml` builds with Hugo and publishes `public/` to the `gh-pages` branch.
-5. Update `baseURL` in `hugo.toml` to `https://<your-username>.github.io/Dual-Classics/` (or your custom domain).
+5. Update `baseURL` in `hugo.toml` to `https://<your-username>.github.io/Dual-Classics/` (or your custom domain). For Cloudflare Pages, prefer setting `HUGO_BASEURL=${CF_PAGES_URL}` as an env var.
 
 ## Adding a new book (example)
 
@@ -99,4 +120,3 @@ Edit the files to add your bilingual content with `{{< bp >}} ... {{< /bp >}}` b
 - Only publish text from public‑domain sources.
 - Keep chapter files ordered by `weight` and/or prefix the filename with numbers for easy sorting.
 - If you want per-book accent colors, set `coverColor` in the book’s `_index.md`.
-

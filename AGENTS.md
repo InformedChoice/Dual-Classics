@@ -37,10 +37,19 @@ This repo hosts a custom Hugo site for kid‑friendly, bilingual (EN + ES) class
 - Bilingual paragraph `bp` lives at `themes/dualkids/layouts/shortcodes/bp.html`.
 - Extend by adding `note` or `vocab` shortcodes if needed in the same folder.
 
-6) Deploy to GitHub Pages
+6) Deploy
+
+Cloudflare Pages (recommended if DNS is on Cloudflare)
+- Cloudflare → Pages → Create project → Connect to Git → repo `main`.
+- Framework: Hugo. Build command: `hugo --gc --minify`. Output: `public`.
+- Env vars: `HUGO_VERSION=0.143.1`, `HUGO_ENV=production`, `HUGO_BASEURL=${CF_PAGES_URL}`.
+- Custom domain: Add `dualclassics.com` (and `www`), set apex as Primary.
+- Optional: Disable `.github/workflows/gh-pages.yml` once Cloudflare is live.
+
+GitHub Pages
 - Set `baseURL` in `hugo.toml`.
-- Push to `main`. Workflow at `.github/workflows/gh-pages.yml` builds and publishes to `gh-pages`.
-- In GitHub → Settings → Pages, ensure source is `gh-pages` branch.
+- Push to `main`. Workflow at `.github/workflows/gh-pages.yml` publishes to `gh-pages`.
+- In GitHub → Settings → Pages, set source to `gh-pages`.
 
 ## Conventions
 
@@ -48,4 +57,3 @@ This repo hosts a custom Hugo site for kid‑friendly, bilingual (EN + ES) class
 - Include pronunciation hints on first mention: `Cyrus (SY-rus)`.
 - If a book is partial, set `status: in-progress` and `plannedChapters` to show progress.
 - Use numeric prefixes on chapter filenames for stable sort, and set `weight` to match the chapter number.
-
