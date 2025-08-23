@@ -1,22 +1,69 @@
 {{ define "main" }}
   <article class="chapter">
-    <header class="chapter-header" style="--cover: {{ or .Parent.Params.coverColor site.Params.primaryColor }};">
-      <a class="back-link" href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a>
-      <h1 class="chapter-title">{{ .Title }}</h1>
-      {{ partial "reading-controls.html" . }}
-    </header>
+    <div class="chapter-top-bar">
+      <a class="back-to-book" href="{{ .Parent.RelPermalink }}">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <span>{{ .Parent.Title }}</span>
+      </a>
+      <button class="reading-settings-toggle" aria-label="Reading settings">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"></path>
+        </svg>
+      </button>
+    </div>
 
-    <nav class="chapter-jump">
-      {{ partial "chapter-nav.html" . }}
-    </nav>
+    <div class="reading-panel" id="reading-panel" hidden>
+      {{ partial "reading-controls.html" . }}
+    </div>
+
+    <header class="chapter-header">
+      <h1 class="chapter-title">{{ .Title }}</h1>
+      {{ with .Params.summary }}
+        <p class="chapter-summary">{{ . }}</p>
+      {{ end }}
+    </header>
 
     <div class="chapter-content readable">
       {{ .Content }}
     </div>
 
-    <footer class="chapter-footer">
-      {{ partial "chapter-nav.html" . }}
-    </footer>
+    <nav class="chapter-navigation">
+      {{ $prev := .PrevInSection }}
+      {{ $next := .NextInSection }}
+      <div class="nav-grid">
+        {{ if $prev }}
+          <a class="nav-card nav-prev" href="{{ $prev.RelPermalink }}">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">{{ $prev.Title }}</span>
+          </a>
+        {{ else }}
+          <div></div>
+        {{ end }}
+        {{ if $next }}
+          <a class="nav-card nav-next" href="{{ $next.RelPermalink }}">
+            <span class="nav-label">Next</span>
+            <span class="nav-title">{{ $next.Title }}</span>
+          </a>
+        {{ else }}
+          <div></div>
+        {{ end }}
+      </div>
+      
+      {{ $chapters := .Parent.Pages.ByWeight }}
+      {{ if gt (len $chapters) 2 }}
+        <div class="chapter-selector">
+          <select class="chapter-dropdown" onchange="if(this.value) location.href=this.value">
+            <option value="">Jump to chapter...</option>
+            {{ range $chapters }}
+              <option value="{{ .RelPermalink }}" {{ if eq .RelPermalink $.RelPermalink }}selected{{ end }}>{{ .Title }}</option>
+            {{ end }}
+          </select>
+        </div>
+      {{ end }}
+    </nav>
   </article>
 {{ end }}
 

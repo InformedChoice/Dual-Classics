@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/css/main.min.4a43a9a5967c0b8d0691817cf96eadf6f169f7dea98ac995062733323a3f32c3.css" integrity="sha256-SkOppZZ8C40GkYF8&#43;W6t9vFp996pismVBiczMjo/MsM=" />
+    <link rel="stylesheet" href="/css/main.min.0b520a689ac1bb4e7619dfcff967af9e9af8a61e291ed4e021ff94e7c298de44.css" integrity="sha256-C1IKaJrBu052Gd/P&#43;Wevnpr4ph4pHtTgIf&#43;U58KY3kQ=" />
   </head>
   <body class="lang-both">
     <header class="site-header">
@@ -61,14 +61,40 @@
       </div>
       <h1 class="chapter-title">Chapter 2 – Of Monarchy and Hereditary Succession / Capítulo 2 – De la monarquía y la sucesión hereditaria</h1>
       <div class="reading-controls">
-  <div class="lang-toggle" role="group" aria-label="Language toggle">
-    <button class="btn-outline" data-lang="both" aria-pressed="true">EN + ES</button>
-    <button class="btn-outline" data-lang="en">EN</button>
-    <button class="btn-outline" data-lang="es">ES</button>
+  <div class="control-group">
+    <label class="control-label">Language</label>
+    <div class="control-buttons">
+      <button class="control-btn" data-lang="both" aria-pressed="true">
+        <span class="btn-icon">🌐</span>
+        <span class="btn-text">Both</span>
+      </button>
+      <button class="control-btn" data-lang="en">
+        <span class="btn-icon">🇬🇧</span>
+        <span class="btn-text">EN</span>
+      </button>
+      <button class="control-btn" data-lang="es">
+        <span class="btn-icon">🇪🇸</span>
+        <span class="btn-text">ES</span>
+      </button>
+    </div>
   </div>
-  <div class="font-toggle" role="group" aria-label="Font size">
-    <button class="btn-outline" data-font="smaller" aria-label="Smaller text">A−</button>
-    <button class="btn-outline" data-font="bigger" aria-label="Bigger text">A+</button>
+  
+  <div class="control-group">
+    <label class="control-label">Text Size</label>
+    <div class="control-buttons">
+      <button class="control-btn size-btn" data-font="smaller" aria-label="Decrease text size">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+      <span class="size-indicator">100%</span>
+      <button class="control-btn size-btn" data-font="bigger" aria-label="Increase text size">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+    </div>
   </div>
 </div>
 

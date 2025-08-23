@@ -1,12 +1,35 @@
 <div class="reading-controls">
-  <div class="lang-toggle" role="group" aria-label="Language toggle">
-    <button class="btn-outline" data-lang="both" aria-pressed="true">EN + ES</button>
-    <button class="btn-outline" data-lang="en">EN</button>
-    <button class="btn-outline" data-lang="es">ES</button>
+  <div class="control-group">
+    <label class="control-label">Language</label>
+    <div class="control-buttons">
+      <button class="control-btn" data-lang="both" aria-pressed="true">
+        <span class="btn-text">EN + ES</span>
+      </button>
+      <button class="control-btn" data-lang="en">
+        <span class="btn-text">English</span>
+      </button>
+      <button class="control-btn" data-lang="es">
+        <span class="btn-text">Español</span>
+      </button>
+    </div>
   </div>
-  <div class="font-toggle" role="group" aria-label="Font size">
-    <button class="btn-outline" data-font="smaller" aria-label="Smaller text">A−</button>
-    <button class="btn-outline" data-font="bigger" aria-label="Bigger text">A+</button>
+  
+  <div class="control-group">
+    <label class="control-label">Text Size</label>
+    <div class="control-buttons">
+      <button class="control-btn size-btn" data-font="smaller" aria-label="Decrease text size">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+      <span class="size-indicator">100%</span>
+      <button class="control-btn size-btn" data-font="bigger" aria-label="Increase text size">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+    </div>
   </div>
 </div>
 
