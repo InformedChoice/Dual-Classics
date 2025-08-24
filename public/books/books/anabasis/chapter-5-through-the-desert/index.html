@@ -44,12 +44,30 @@
         </svg>
         <span>Anabasis (The March of the Ten Thousand) — Modern Simple</span>
       </a>
-      <button class="reading-settings-toggle" aria-label="Reading settings">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="3"></circle>
-          <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"></path>
-        </svg>
-      </button>
+      <div class="reading-buttons">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="reading-settings-toggle" aria-label="Reading settings">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"></path>
+          </svg>
+        </button>
+      </div>
     </div>
 
     <div class="reading-panel" id="reading-panel" hidden>
@@ -98,8 +116,19 @@
       </button>
     </div>
   </div>
+  
+  <div class="control-group">
+    <label class="control-label">Theme</label>
+    <div class="control-buttons">
+      <button class="control-btn theme-setting" data-theme="dark" aria-pressed="true">
+        <span class="btn-text">🌙 Dark</span>
+      </button>
+      <button class="control-btn theme-setting" data-theme="light" aria-pressed="false">
+        <span class="btn-text">☀️ Light</span>
+      </button>
+    </div>
+  </div>
 </div>
-
     </div>
 
     <header class="chapter-header">
@@ -229,6 +258,194 @@
       
     </nav>
   </article>
+  
+  <style>
+     
+    .dark-mode-active {
+      background-color: #1a1611 !important;
+    }
+    
+    .dark-mode-active .chapter-top-bar {
+      background: rgba(30, 26, 21, 0.98) !important;
+      border-bottom: 1px solid rgba(255, 169, 77, 0.15) !important;
+    }
+    
+    .dark-mode-active .chapter-header {
+      border-bottom: 2px solid rgba(255, 169, 77, 0.2) !important;
+    }
+    
+    .dark-mode-active .chapter-title {
+      color: #ffd4a3 !important;
+    }
+    
+    .dark-mode-active .chapter-summary {
+      color: #c4a67d !important;
+      font-style: italic;
+    }
+    
+    .dark-mode-active .readable .bp,
+    .dark-mode-active .lang {
+      background: #2a2520 !important;
+      border-left: 3px solid #ff9944 !important;
+      color: #f0e0d0 !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+    }
+    
+    .dark-mode-active .lang-label {
+      color: #ffb366 !important;
+    }
+    
+    .dark-mode-active .nav-card {
+      background: #2a2520 !important;
+      border: 1px solid rgba(255, 169, 77, 0.2) !important;
+      color: #f0e0d0 !important;
+    }
+    
+    .dark-mode-active .nav-card:hover {
+      background: #332b25 !important;
+      border-color: #ff9944 !important;
+    }
+    
+    .dark-mode-active .nav-label {
+      color: #a89577 !important;
+    }
+    
+    .dark-mode-active .nav-title {
+      color: #ffd4a3 !important;
+    }
+    
+    .dark-mode-active .chapter-dropdown {
+      background: #2a2520 !important;
+      border: 1px solid rgba(255, 169, 77, 0.2) !important;
+      color: #f0e0d0 !important;
+    }
+    
+    .dark-mode-active .chapter-dropdown option {
+      background: #2a2520 !important;
+    }
+    
+    .dark-mode-active .back-to-book {
+      color: #c4a67d !important;
+    }
+    
+    .dark-mode-active .back-to-book:hover {
+      background: rgba(255, 169, 77, 0.1) !important;
+      color: #ffd4a3 !important;
+    }
+    
+    .dark-mode-active .theme-toggle-btn,
+    .dark-mode-active .reading-settings-toggle {
+      background: #2a2520 !important;
+      border: 1px solid rgba(255, 169, 77, 0.2) !important;
+      color: #ffb366 !important;
+    }
+    
+    .dark-mode-active .theme-toggle-btn:hover,
+    .dark-mode-active .reading-settings-toggle:hover {
+      background: #332b25 !important;
+      border-color: #ff9944 !important;
+    }
+    
+    .dark-mode-active .chapter-navigation {
+      border-top: 2px solid rgba(255, 169, 77, 0.2) !important;
+    }
+    
+    .dark-mode-active .reading-panel {
+      background: #2a2520 !important;
+      border-bottom: 1px solid rgba(255, 169, 77, 0.15) !important;
+    }
+    
+    .dark-mode-active .control-btn {
+      background: #332b25 !important;
+      border: 1px solid rgba(255, 169, 77, 0.2) !important;
+      color: #f0e0d0 !important;
+    }
+    
+    .dark-mode-active .control-btn[aria-pressed="true"] {
+      background: #ff9944 !important;
+      color: #1a1611 !important;
+      border-color: #ff9944 !important;
+    }
+    
+    .dark-mode-active .control-label {
+      color: #a89577 !important;
+    }
+    
+    .dark-mode-active .size-indicator {
+      color: #f0e0d0 !important;
+    }
+  </style>
+  
+  <script>
+    
+    function applyDarkMode() {
+      document.body.style.backgroundColor = '#1a1611';
+      document.body.style.color = '#f0e0d0';
+      document.body.classList.add('dark-mode-active');
+      
+      
+      var sun = document.querySelector('.sun-icon');
+      var moon = document.querySelector('.moon-icon');
+      if (sun) sun.style.display = 'none';
+      if (moon) moon.style.display = 'block';
+    }
+    
+    function applyLightMode() {
+      document.body.style.backgroundColor = '';
+      document.body.style.color = '';
+      document.body.classList.remove('dark-mode-active');
+      
+      
+      var sun = document.querySelector('.sun-icon');
+      var moon = document.querySelector('.moon-icon');
+      if (sun) sun.style.display = 'block';
+      if (moon) moon.style.display = 'none';
+    }
+    
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        applyLightMode();
+      } else {
+        applyDarkMode();
+      }
+      
+      
+      var btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          var isLight = localStorage.getItem('theme') === 'light';
+          if (isLight) {
+            applyDarkMode();
+            localStorage.setItem('theme', 'dark');
+          } else {
+            applyLightMode();
+            localStorage.setItem('theme', 'light');
+          }
+        });
+      }
+      
+      
+      var themeButtons = document.querySelectorAll('.theme-setting');
+      themeButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var theme = this.getAttribute('data-theme');
+          if (theme === 'light') {
+            applyLightMode();
+          } else {
+            applyDarkMode();
+          }
+          localStorage.setItem('theme', theme);
+          
+          
+          themeButtons.forEach(function(b) {
+            b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+          });
+        });
+      });
+    });
+  </script>
 
     </main>
     <footer class="site-footer">

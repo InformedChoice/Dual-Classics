@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Debug Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Dark mode styles */
+        body {
+            background: #1a1611;
+            color: #e8d7c3;
+        }
+        
+        body.light-mode {
+            background: #fff;
+            color: #333;
+        }
+        
+        .theme-toggle-btn {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #666;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle-btn:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+        
+        .sun-icon { display: none; }
+        .moon-icon { display: block; }
+        
+        .light-mode .sun-icon { display: block; }
+        .light-mode .moon-icon { display: none; }
+        
+        .debug-info {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+            font-family: monospace;
+        }
+        
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .success { background: green; color: white; }
+        .error { background: red; color: white; }
+        .info { background: blue; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Dark Mode Debug Test</h1>
+    
+    <button class="theme-toggle-btn" onclick="toggleTheme()">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </button>
+    
+    <div class="debug-info">
+        <h3>Debug Information:</h3>
+        <div id="debug-output"></div>
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <button onclick="testLocalStorage()">Test LocalStorage</button>
+        <button onclick="clearStorage()">Clear Storage</button>
+        <button onclick="location.reload()">Reload Page</button>
+    </div>
+    
+    <script>
+        const debug = document.getElementById('debug-output');
+        
+        function log(message, type = 'info') {
+            const div = document.createElement('div');
+            div.className = `status ${type}`;
+            div.textContent = message;
+            debug.appendChild(div);
+            console.log(message);
+        }
+        
+        // Check initial state
+        log('Page loaded');
+        log('Current theme in storage: ' + (localStorage.getItem('theme') || 'not set'));
+        log('Body has light-mode class: ' + document.body.classList.contains('light-mode'));
+        
+        // Apply saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            log('Applied light mode from storage');
+        } else {
+            document.body.classList.remove('light-mode');
+            log('Using default dark mode');
+        }
+        
+        // Toggle function
+        function toggleTheme() {
+            log('Toggle button clicked', 'success');
+            
+            const isLight = document.body.classList.contains('light-mode');
+            
+            if (isLight) {
+                document.body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark');
+                log('Switched to DARK mode', 'success');
+            } else {
+                document.body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+                log('Switched to LIGHT mode', 'success');
+            }
+        }
+        
+        function testLocalStorage() {
+            try {
+                localStorage.setItem('test', 'works');
+                const test = localStorage.getItem('test');
+                if (test === 'works') {
+                    log('LocalStorage is working!', 'success');
+                    localStorage.removeItem('test');
+                } else {
+                    log('LocalStorage read failed', 'error');
+                }
+            } catch (e) {
+                log('LocalStorage error: ' + e.message, 'error');
+            }
+        }
+        
+        function clearStorage() {
+            localStorage.removeItem('theme');
+            log('Storage cleared', 'success');
+        }
+        
+        // Test if JavaScript is working
+        log('JavaScript is running!', 'success');
+    </script>
+</body>
+</html>
