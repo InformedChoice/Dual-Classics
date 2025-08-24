@@ -24,7 +24,7 @@ Clearco preguntó si la tregua solo valía mientras iban y venían, o si era par
 {{< /bp >}}
 
 {{< bp >}}
-On their way, they came across many wide trenches filled with water. They crossed them using fallen palm logs or by cutting new ones. Along the way, they tasted the soft part of palm trees—it was sweet but gave many of them a headache! They stayed in those villages for three days. Then a group including Tissaphernes (tis-uh-FER-neez) and the king's brother-in-law visited. The generals came forward to greet them, and the talks began.
+On their way, they came across many wide trenches filled with water. They crossed them using fallen palm logs or by cutting new ones. Along the way, they tasted the soft part of palm trees—it was sweet but gave many of them a headache! They stayed in those villages for three days. Then a group including {{< name "Tissaphernes" "tis-uh-FER-neez" >}} and the king's brother-in-law visited. The generals came forward to greet them, and the talks began.
 ---
-En el camino, encontraron muchas zanjas anchas llenas de agua. Las cruzaron usando troncos de palmera caídos o cortando otros nuevos. En el trayecto probaron la parte blanda de las palmeras—era dulce, pero a muchos les provocó dolor de cabeza. Se quedaron en esas aldeas por tres días. Después, un grupo que incluía a Tisasfernes (tis-uh-FER-nes) y el cuñado del rey los visitó. Los generales se acercaron a saludarlos, y comenzaron las conversaciones.
+En el camino, encontraron muchas zanjas anchas llenas de agua. Las cruzaron usando troncos de palmera caídos o cortando otros nuevos. En el trayecto probaron la parte blanda de las palmeras—era dulce, pero a muchos les provocó dolor de cabeza. Se quedaron en esas aldeas por tres días. Después, un grupo que incluía a {{< name "Tisasfernes" "tis-uh-FER-nes" >}} y el cuñado del rey los visitó. Los generales se acercaron a saludarlos, y comenzaron las conversaciones.
 {{< /bp >}}

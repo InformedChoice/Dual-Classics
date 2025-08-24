@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/css/main.min.ad890043bc92bea7355e3de123c2a787d87e8286cb7269b883c5b04d48884d0e.css" integrity="sha256-rYkAQ7ySvqc1Xj3hI8Knh9h&#43;gobLcmm4g8WwTUiITQ4=" />
+    
+    <link rel="stylesheet" href="/css/pronunciation.css" />
   </head>
   <body class="lang-both">
     <header class="site-header">
@@ -84,8 +86,19 @@
       </button>
     </div>
   </div>
+  
+  <div class="control-group">
+    <label class="control-label">Pronunciation</label>
+    <div class="control-buttons">
+      <button class="control-btn pronunciation-toggle" data-pronunciation="off" aria-pressed="false">
+        <span class="btn-text">Off</span>
+      </button>
+      <button class="control-btn pronunciation-toggle" data-pronunciation="on" aria-pressed="false">
+        <span class="btn-text">On</span>
+      </button>
+    </div>
+  </div>
 </div>
-
 
     </div>
 
@@ -100,12 +113,18 @@
       <div class="bp">
   <div class="lang lang-en">
     <div class="lang-label">English</div>
-    <div class="p">The Greeks and Ariaeus (ah-ree-AY-us) camped close to each other, waiting more than twenty days. During this time, some of Ariaeus&rsquo;s family and friends visited, bringing gifts and promises from the king saying he would forgive those who had joined Cyrus. But while the Persians seemed friendly, they ignored the Greeks. The Greek soldiers—feeling uneasy—asked their leaders, &ldquo;Why are we waiting? The king just wants to teach us a lesson, and we could be in danger!&rdquo;</div>
+    <div class="p">The Greeks and <span class="name-with-pronunciation">
+<span class="character-name">Ariaeus</span>
+<span class="pronunciation-guide">ah-ree-AY-us</span>
+</span> camped close to each other, waiting more than twenty days. During this time, some of Ariaeus&rsquo;s family and friends visited, bringing gifts and promises from the king saying he would forgive those who had joined Cyrus. But while the Persians seemed friendly, they ignored the Greeks. The Greek soldiers—feeling uneasy—asked their leaders, &ldquo;Why are we waiting? The king just wants to teach us a lesson, and we could be in danger!&rdquo;</div>
   </div>
   
   <div class="lang lang-es">
     <div class="lang-label">Español</div>
-    <div class="p">Los griegos y Ariaeus (a-ree-AY-us) acamparon cerca uno del otro, esperando más de veinte días. Durante ese tiempo, familiares y amigos de Ariaeus lo visitaron, trayendo regalos y promesas del rey de perdonar a quienes habían apoyado a Ciro. Pero, aunque los persas parecían amistosos, ignoraban a los griegos. Los soldados griegos—preocupados—preguntaron a sus líderes: &ldquo;¿Por qué estamos esperando? El rey solo quiere darnos una lección, ¡y podríamos estar en peligro!&rdquo;</div>
+    <div class="p">Los griegos y <span class="name-with-pronunciation">
+<span class="character-name">Ariaeus</span>
+<span class="pronunciation-guide">a-ree-AY-us</span>
+</span> acamparon cerca uno del otro, esperando más de veinte días. Durante ese tiempo, familiares y amigos de Ariaeus lo visitaron, trayendo regalos y promesas del rey de perdonar a quienes habían apoyado a Ciro. Pero, aunque los persas parecían amistosos, ignoraban a los griegos. Los soldados griegos—preocupados—preguntaron a sus líderes: &ldquo;¿Por qué estamos esperando? El rey solo quiere darnos una lección, ¡y podríamos estar en peligro!&rdquo;</div>
   </div>
   
   </div>
@@ -196,5 +215,7 @@
 
 
     <script src="/js/main.js"></script>
+    
+    <script src="/js/pronunciation-toggle.js"></script>
   </body>
   </html>

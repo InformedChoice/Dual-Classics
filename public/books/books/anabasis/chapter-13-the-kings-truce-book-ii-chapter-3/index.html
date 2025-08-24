@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/css/main.min.ad890043bc92bea7355e3de123c2a787d87e8286cb7269b883c5b04d48884d0e.css" integrity="sha256-rYkAQ7ySvqc1Xj3hI8Knh9h&#43;gobLcmm4g8WwTUiITQ4=" />
+    
+    <link rel="stylesheet" href="/css/pronunciation.css" />
   </head>
   <body class="lang-both">
     <header class="site-header">
@@ -84,8 +86,19 @@
       </button>
     </div>
   </div>
+  
+  <div class="control-group">
+    <label class="control-label">Pronunciation</label>
+    <div class="control-buttons">
+      <button class="control-btn pronunciation-toggle" data-pronunciation="off" aria-pressed="false">
+        <span class="btn-text">Off</span>
+      </button>
+      <button class="control-btn pronunciation-toggle" data-pronunciation="on" aria-pressed="false">
+        <span class="btn-text">On</span>
+      </button>
+    </div>
+  </div>
 </div>
-
 
     </div>
 
@@ -142,12 +155,18 @@
 <div class="bp">
   <div class="lang lang-en">
     <div class="lang-label">English</div>
-    <div class="p">On their way, they came across many wide trenches filled with water. They crossed them using fallen palm logs or by cutting new ones. Along the way, they tasted the soft part of palm trees—it was sweet but gave many of them a headache! They stayed in those villages for three days. Then a group including Tissaphernes (tis-uh-FER-neez) and the king&rsquo;s brother-in-law visited. The generals came forward to greet them, and the talks began.</div>
+    <div class="p">On their way, they came across many wide trenches filled with water. They crossed them using fallen palm logs or by cutting new ones. Along the way, they tasted the soft part of palm trees—it was sweet but gave many of them a headache! They stayed in those villages for three days. Then a group including <span class="name-with-pronunciation">
+<span class="character-name">Tissaphernes</span>
+<span class="pronunciation-guide">tis-uh-FER-neez</span>
+</span> and the king&rsquo;s brother-in-law visited. The generals came forward to greet them, and the talks began.</div>
   </div>
   
   <div class="lang lang-es">
     <div class="lang-label">Español</div>
-    <div class="p">En el camino, encontraron muchas zanjas anchas llenas de agua. Las cruzaron usando troncos de palmera caídos o cortando otros nuevos. En el trayecto probaron la parte blanda de las palmeras—era dulce, pero a muchos les provocó dolor de cabeza. Se quedaron en esas aldeas por tres días. Después, un grupo que incluía a Tisasfernes (tis-uh-FER-nes) y el cuñado del rey los visitó. Los generales se acercaron a saludarlos, y comenzaron las conversaciones.</div>
+    <div class="p">En el camino, encontraron muchas zanjas anchas llenas de agua. Las cruzaron usando troncos de palmera caídos o cortando otros nuevos. En el trayecto probaron la parte blanda de las palmeras—era dulce, pero a muchos les provocó dolor de cabeza. Se quedaron en esas aldeas por tres días. Después, un grupo que incluía a <span class="name-with-pronunciation">
+<span class="character-name">Tisasfernes</span>
+<span class="pronunciation-guide">tis-uh-FER-nes</span>
+</span> y el cuñado del rey los visitó. Los generales se acercaron a saludarlos, y comenzaron las conversaciones.</div>
   </div>
   
   </div>
@@ -238,5 +257,7 @@
 
 
     <script src="/js/main.js"></script>
+    
+    <script src="/js/pronunciation-toggle.js"></script>
   </body>
   </html>

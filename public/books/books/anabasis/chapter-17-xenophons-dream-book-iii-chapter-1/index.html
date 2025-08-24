@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/css/main.min.ad890043bc92bea7355e3de123c2a787d87e8286cb7269b883c5b04d48884d0e.css" integrity="sha256-rYkAQ7ySvqc1Xj3hI8Knh9h&#43;gobLcmm4g8WwTUiITQ4=" />
+    
+    <link rel="stylesheet" href="/css/pronunciation.css" />
   </head>
   <body class="lang-both">
     <header class="site-header">
@@ -84,8 +86,19 @@
       </button>
     </div>
   </div>
+  
+  <div class="control-group">
+    <label class="control-label">Pronunciation</label>
+    <div class="control-buttons">
+      <button class="control-btn pronunciation-toggle" data-pronunciation="off" aria-pressed="false">
+        <span class="btn-text">Off</span>
+      </button>
+      <button class="control-btn pronunciation-toggle" data-pronunciation="on" aria-pressed="false">
+        <span class="btn-text">On</span>
+      </button>
+    </div>
+  </div>
 </div>
-
 
     </div>
 
@@ -100,12 +113,24 @@
       <div class="bp">
   <div class="lang lang-en">
     <div class="lang-label">English</div>
-    <div class="p">Everyone was tired and sad. Many could not eat or light fires that night. They couldn&rsquo;t sleep because they missed their homes, families, and knew they might never see them again. Among them was a thoughtful Athenian named Xenophon (zen-uh-FAWN). He wasn&rsquo;t a general or a soldier—he joined simply because his friend Proxenus (pro-KSEE-nus) invited him. Proxenus believed Cyrus was worth more than their homeland and wanted Xenophon to meet him.</div>
+    <div class="p">Everyone was tired and sad. Many could not eat or light fires that night. They couldn&rsquo;t sleep because they missed their homes, families, and knew they might never see them again. Among them was a thoughtful Athenian named <span class="name-with-pronunciation">
+<span class="character-name">Xenophon</span>
+<span class="pronunciation-guide">zen-uh-FAWN</span>
+</span>. He wasn&rsquo;t a general or a soldier—he joined simply because his friend <span class="name-with-pronunciation">
+<span class="character-name">Proxenus</span>
+<span class="pronunciation-guide">pro-KSEE-nus</span>
+</span> invited him. Proxenus believed Cyrus was worth more than their homeland and wanted Xenophon to meet him.</div>
   </div>
   
   <div class="lang lang-es">
     <div class="lang-label">Español</div>
-    <div class="p">Todos estaban cansados y tristes. Muchos no comieron ni encendieron hogueras esa noche. No podían dormir porque extrañaban sus hogares, sus familias y sabían que tal vez no los volverían a ver. Entre ellos estaba un ateniense llamado Jenofonte (jeh-no-FAWN-te). No era general ni soldado—se unió porque su amigo Proxenos (pro-SEE-nos) lo invitó. Proxenos creía que Ciro valía más que su patria y quería que Jenofonte conociera a Ciro.</div>
+    <div class="p">Todos estaban cansados y tristes. Muchos no comieron ni encendieron hogueras esa noche. No podían dormir porque extrañaban sus hogares, sus familias y sabían que tal vez no los volverían a ver. Entre ellos estaba un ateniense llamado <span class="name-with-pronunciation">
+<span class="character-name">Jenofonte</span>
+<span class="pronunciation-guide">jeh-no-FAWN-te</span>
+</span>. No era general ni soldado—se unió porque su amigo <span class="name-with-pronunciation">
+<span class="character-name">Proxenos</span>
+<span class="pronunciation-guide">pro-SEE-nos</span>
+</span> lo invitó. Proxenos creía que Ciro valía más que su patria y quería que Jenofonte conociera a Ciro.</div>
   </div>
   
   </div>
@@ -224,5 +249,7 @@
 
 
     <script src="/js/main.js"></script>
+    
+    <script src="/js/pronunciation-toggle.js"></script>
   </body>
   </html>

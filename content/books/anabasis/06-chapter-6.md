@@ -6,9 +6,9 @@ summary: "A Persian noble tries to betray Cyrus but is caught and put on trial."
 ---
 
 {{< bp >}}
-As the army marched, they noticed many horse tracks and horse droppings along the way—it looked like an army of about 2,000 horses had passed through. Someone had burned the grass and plants ahead of them. A Persian noble named Orontas (oh-RON-tas)—who used to fight for Cyrus but made peace long ago—offered to help. He asked Cyrus for 1,000 horsemen to set a surprise attack and stop the trouble ahead.
+As the army marched, they noticed many horse tracks and horse droppings along the way—it looked like an army of about 2,000 horses had passed through. Someone had burned the grass and plants ahead of them. A Persian noble named {{< name "Orontas" "oh-RON-tas" >}}—who used to fight for Cyrus but made peace long ago—offered to help. He asked Cyrus for 1,000 horsemen to set a surprise attack and stop the trouble ahead.
 ---
-Mientras el ejército marchaba, notaron muchas huellas de caballos y estiércol por el camino: parecía que unas 2,000 caballos habían pasado por allí. Alguien había quemado el pasto y las plantas adelante. Un noble persa llamado Orontas (o-RON-tas)—quien había peleado contra Ciro pero luego hicieron las paces—ofreció ayudar. Le pidió a Ciro 1,000 jinetes para hacer una emboscada y detener el problema.
+Mientras el ejército marchaba, notaron muchas huellas de caballos y estiércol por el camino: parecía que unas 2,000 caballos habían pasado por allí. Alguien había quemado el pasto y las plantas adelante. Un noble persa llamado {{< name "Orontas" "o-RON-tas" >}}—quien había peleado contra Ciro pero luego hicieron las paces—ofreció ayudar. Le pidió a Ciro 1,000 jinetes para hacer una emboscada y detener el problema.
 {{< /bp >}}
 
 {{< bp >}}

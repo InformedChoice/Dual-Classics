@@ -6,9 +6,9 @@ summary: "Cyrus wants to be king."
 ---
 
 {{< bp >}}
-Darius (DAIR-ee-us) and his wife Parysatis (pa-RY-sa-tiss) had two sons. The older son was Artaxerxes (ar-TAK-serk-sees) and the younger was Cyrus (SY-rus).
+Darius (DAIR-ee-us) and his wife {{< name "Parysatis" "pa-RY-sa-tiss" >}} had two sons. The older son was {{< name "Artaxerxes" "ar-TAK-serk-sees" >}} and the younger was Cyrus (SY-rus).
 ---
-Darío (DA-ree-o) y su esposa Parysatis (pa-RY-sa-tis) tuvieron dos hijos. El mayor fue Artajerjes (ar-ta-HER-hes) y el más joven fue Ciro (SEE-ro).
+Darío (DA-ree-o) y su esposa {{< name "Parysatis" "pa-RY-sa-tis" >}} tuvieron dos hijos. El mayor fue {{< name "Artajerjes" "ar-ta-HER-hes" >}} y el más joven fue Ciro (SEE-ro).
 {{< /bp >}}
 
 {{< bp >}}
@@ -24,9 +24,9 @@ Artajerjes ya estaba allí. Pero Ciro estaba lejos como gobernante de su provinc
 {{< /bp >}}
 
 {{< bp >}}
-After Darius died, Artaxerxes became king. Tissaphernes (te-SAF-er-neez) told Artaxerxes that Cyrus was making plans against him. So Artaxerxes had Cyrus arrested.
+After Darius died, Artaxerxes became king. {{< name "Tissaphernes" "te-SAF-er-neez" >}} told Artaxerxes that Cyrus was making plans against him. So Artaxerxes had Cyrus arrested.
 ---
-Después de que Darío murió, Artajerjes se convirtió en rey. Tisasfernes (tee-sas-FER-nes) le dijo a Artajerjes que Ciro estaba preparando planes contra él. Entonces Artajerjes mandó arrestar a Ciro.
+Después de que Darío murió, Artajerjes se convirtió en rey. {{< name "Tisasfernes" "tee-sas-FER-nes" >}} le dijo a Artajerjes que Ciro estaba preparando planes contra él. Entonces Artajerjes mandó arrestar a Ciro.
 {{< /bp >}}
 
 {{< bp >}}

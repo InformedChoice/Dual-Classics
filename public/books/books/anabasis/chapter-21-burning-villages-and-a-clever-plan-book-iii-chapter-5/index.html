@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/css/main.min.ad890043bc92bea7355e3de123c2a787d87e8286cb7269b883c5b04d48884d0e.css" integrity="sha256-rYkAQ7ySvqc1Xj3hI8Knh9h&#43;gobLcmm4g8WwTUiITQ4=" />
+    
+    <link rel="stylesheet" href="/css/pronunciation.css" />
   </head>
   <body class="lang-both">
     <header class="site-header">
@@ -84,8 +86,19 @@
       </button>
     </div>
   </div>
+  
+  <div class="control-group">
+    <label class="control-label">Pronunciation</label>
+    <div class="control-buttons">
+      <button class="control-btn pronunciation-toggle" data-pronunciation="off" aria-pressed="false">
+        <span class="btn-text">Off</span>
+      </button>
+      <button class="control-btn pronunciation-toggle" data-pronunciation="on" aria-pressed="false">
+        <span class="btn-text">On</span>
+      </button>
+    </div>
+  </div>
 </div>
-
 
     </div>
 
@@ -100,12 +113,32 @@
       <p><div class="bp">
   <div class="lang lang-en">
     <div class="lang-label">English</div>
-    <div class="p">Tissaphernes (tis-uh-FER-neez) tried to burn some villages. It made the Greek soldiers worried—they needed food if those villages were destroyed. Cheirisophus (ky-ri-SOH-fus) came back from a mission, and Xenophon (zen-uh-FAWN) rode among the troops shouting: &ldquo;See, men of Greece, this land is ours now. They&rsquo;re burning their own land—land they should protect. We&rsquo;ll look after ourselves, even if they burn food!&rdquo;</div>
+    <div class="p"><span class="name-with-pronunciation">
+    <span class="character-name">Tissaphernes</span>
+    <span class="pronunciation-guide">tis-uh-FER-neez</span>
+</span> tried to burn some villages. It made the Greek soldiers worried—they needed food if those villages were destroyed. <span class="name-with-pronunciation">
+    <span class="character-name">Cheirisophus</span>
+    <span class="pronunciation-guide">ky-ri-SOH-fus</span>
+</span> came back from a mission, and <span class="name-with-pronunciation">
+    <span class="character-name">Xenophon</span>
+    <span class="pronunciation-guide">zen-uh-FAWN</span>
+</span> rode among the troops shouting: "See, men of Greece, this land is ours now. They're burning their own land—land they should protect. We'll look after ourselves, even if they burn food!"
+</div>
   </div>
   
   <div class="lang lang-es">
     <div class="lang-label">Español</div>
-    <div class="p">Tisafernes (tis-ah-FER-nes) intentó quemar algunas aldeas, lo que preocupó a los soldados griegos—necesitaban comida si las aldeas eran destruidas. Queirisófo (ky-ri-SO-fos) regresó de una misión, y Jenofonte (jeh-no-FAWN-te) trotó entre las filas gritando: &ldquo;Mirad, griegos, esta tierra ya es nuestra. Están quemando su propia tierra—tierra que deberían proteger. Nos cuidaremos, ¡aunque quemen comida!&rdquo;</div>
+    <div class="p"><span class="name-with-pronunciation">
+    <span class="character-name">Tisafernes</span>
+    <span class="pronunciation-guide">tis-ah-FER-nes</span>
+</span> intentó quemar algunas aldeas, lo que preocupó a los soldados griegos—necesitaban comida si las aldeas eran destruidas. <span class="name-with-pronunciation">
+    <span class="character-name">Queirisófo</span>
+    <span class="pronunciation-guide">ky-ri-SO-fos</span>
+</span> regresó de una misión, y <span class="name-with-pronunciation">
+    <span class="character-name">Jenofonte</span>
+    <span class="pronunciation-guide">jeh-no-FAWN-te</span>
+</span> trotó entre las filas gritando: "Mirad, griegos, esta tierra ya es nuestra. Están quemando su propia tierra—tierra que deberían proteger. Nos cuidaremos, ¡aunque quemen comida!"
+</div>
   </div>
   
   </div>
@@ -221,5 +254,7 @@
 
 
     <script src="/js/main.js"></script>
+    
+    <script src="/js/pronunciation-toggle.js"></script>
   </body>
   </html>

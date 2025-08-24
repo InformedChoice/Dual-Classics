@@ -5,9 +5,9 @@ weight: 21
 summary: "Tissaphernes burns villages while the Greeks devise an ingenious river crossing plan."
 ---
 {{< bp >}}
-Tissaphernes (tis-uh-FER-neez) tried to burn some villages. It made the Greek soldiers worried—they needed food if those villages were destroyed. Cheirisophus (ky-ri-SOH-fus) came back from a mission, and Xenophon (zen-uh-FAWN) rode among the troops shouting: "See, men of Greece, this land is ours now. They're burning their own land—land they should protect. We'll look after ourselves, even if they burn food!"
+{{< name "Tissaphernes" "tis-uh-FER-neez" >}} tried to burn some villages. It made the Greek soldiers worried—they needed food if those villages were destroyed. {{< name "Cheirisophus" "ky-ri-SOH-fus" >}} came back from a mission, and {{< name "Xenophon" "zen-uh-FAWN" >}} rode among the troops shouting: "See, men of Greece, this land is ours now. They're burning their own land—land they should protect. We'll look after ourselves, even if they burn food!"
 ---
-Tisafernes (tis-ah-FER-nes) intentó quemar algunas aldeas, lo que preocupó a los soldados griegos—necesitaban comida si las aldeas eran destruidas. Queirisófo (ky-ri-SO-fos) regresó de una misión, y Jenofonte (jeh-no-FAWN-te) trotó entre las filas gritando: "Mirad, griegos, esta tierra ya es nuestra. Están quemando su propia tierra—tierra que deberían proteger. Nos cuidaremos, ¡aunque quemen comida!"
+{{< name "Tisafernes" "tis-ah-FER-nes" >}} intentó quemar algunas aldeas, lo que preocupó a los soldados griegos—necesitaban comida si las aldeas eran destruidas. {{< name "Queirisófo" "ky-ri-SO-fos" >}} regresó de una misión, y {{< name "Jenofonte" "jeh-no-FAWN-te" >}} trotó entre las filas gritando: "Mirad, griegos, esta tierra ya es nuestra. Están quemando su propia tierra—tierra que deberían proteger. Nos cuidaremos, ¡aunque quemen comida!"
 {{< /bp >}}
 {{< bp >}}
 Cheirisophus nodded and replied, "Let's burn a little ourselves—it might make them stop faster." Then, while gathering food, the leaders met with heavy hearts. High mountains and a deep river blocked their way—they were stuck with no safe path forward.

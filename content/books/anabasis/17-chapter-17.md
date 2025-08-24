@@ -6,9 +6,9 @@ summary: "Xenophon, a thoughtful Athenian, has a prophetic dream as the Greeks f
 ---
 
 {{< bp >}}
-Everyone was tired and sad. Many could not eat or light fires that night. They couldn't sleep because they missed their homes, families, and knew they might never see them again. Among them was a thoughtful Athenian named Xenophon (zen-uh-FAWN). He wasn't a general or a soldier—he joined simply because his friend Proxenus (pro-KSEE-nus) invited him. Proxenus believed Cyrus was worth more than their homeland and wanted Xenophon to meet him.
+Everyone was tired and sad. Many could not eat or light fires that night. They couldn't sleep because they missed their homes, families, and knew they might never see them again. Among them was a thoughtful Athenian named {{< name "Xenophon" "zen-uh-FAWN" >}}. He wasn't a general or a soldier—he joined simply because his friend {{< name "Proxenus" "pro-KSEE-nus" >}} invited him. Proxenus believed Cyrus was worth more than their homeland and wanted Xenophon to meet him.
 ---
-Todos estaban cansados y tristes. Muchos no comieron ni encendieron hogueras esa noche. No podían dormir porque extrañaban sus hogares, sus familias y sabían que tal vez no los volverían a ver. Entre ellos estaba un ateniense llamado Jenofonte (jeh-no-FAWN-te). No era general ni soldado—se unió porque su amigo Proxenos (pro-SEE-nos) lo invitó. Proxenos creía que Ciro valía más que su patria y quería que Jenofonte conociera a Ciro.
+Todos estaban cansados y tristes. Muchos no comieron ni encendieron hogueras esa noche. No podían dormir porque extrañaban sus hogares, sus familias y sabían que tal vez no los volverían a ver. Entre ellos estaba un ateniense llamado {{< name "Jenofonte" "jeh-no-FAWN-te" >}}. No era general ni soldado—se unió porque su amigo {{< name "Proxenos" "pro-SEE-nos" >}} lo invitó. Proxenos creía que Ciro valía más que su patria y quería que Jenofonte conociera a Ciro.
 {{< /bp >}}
 
 {{< bp >}}
