@@ -1,0 +1,182 @@
+/* Chapter Navigation - Improved */
+.chapter-navigation {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-card:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Add arrow icons for better visual indication */
+.nav-prev::before,
+.nav-next::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--ink-dim);
+  font-weight: bold;
+}
+
+.nav-prev {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.nav-prev::before {
+  content: "←";
+  left: 0.8rem;
+}
+
+.nav-next {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.nav-next::after {
+  content: "→";
+  right: 0.8rem;
+}
+
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.chapter-selector {
+  display: flex;
+  justify-content: center;
+}
+
+.chapter-dropdown {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  background: white;
+  font-size: 0.9rem;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chapter-dropdown:hover {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.chapter-dropdown:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile-optimized navigation */
+@media (max-width: 600px) {
+  .chapter-navigation {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+  
+  /* Keep buttons side-by-side on mobile but make them more compact */
+  .nav-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .nav-card {
+    padding: 0.7rem 0.5rem;
+    min-height: 60px;
+  }
+  
+  /* Simplify mobile display */
+  .nav-label {
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .nav-title {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 1;
+  }
+  
+  /* Adjust arrow positioning for mobile */
+  .nav-prev {
+    padding-left: 1.5rem;
+  }
+  
+  .nav-prev::before {
+    left: 0.4rem;
+    font-size: 1rem;
+  }
+  
+  .nav-next {
+    padding-right: 1.5rem;
+  }
+  
+  .nav-next::after {
+    right: 0.4rem;
+    font-size: 1rem;
+  }
+  
+  /* If only one button exists, let it take full width */
+  .nav-grid:has(.nav-prev:only-child),
+  .nav-grid:has(.nav-next:only-child) {
+    grid-template-columns: 1fr;
+  }
+  
+  .chapter-dropdown {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Very small screens - stack vertically but make it clear */
+@media (max-width: 350px) {
+  .nav-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .nav-card {
+    padding: 0.8rem 1rem;
+  }
+}
