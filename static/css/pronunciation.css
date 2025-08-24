@@ -1,0 +1,85 @@
+/* Pronunciation Guide Styles */
+
+/* Default: Hover-only pronunciation (OFF state) */
+.name-with-pronunciation {
+    position: relative;
+    display: inline;
+}
+
+.character-name {
+    font-weight: bold;
+    cursor: help;
+    border-bottom: 1px dotted #666;
+}
+
+.pronunciation-guide {
+    display: none;
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 0.85em;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.name-with-pronunciation:hover .pronunciation-guide {
+    display: block;
+}
+
+/* Toggle mode - when pronunciation guides are shown inline (ON state) */
+body.show-all-pronunciation .pronunciation-guide {
+    display: inline;
+    position: static;
+    background: none;
+    color: #666;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-left: 4px;
+    transform: none;
+    pointer-events: auto;
+}
+
+body.show-all-pronunciation .pronunciation-guide::before {
+    content: "(";
+}
+
+body.show-all-pronunciation .pronunciation-guide::after {
+    content: ")";
+}
+
+body.show-all-pronunciation .character-name {
+    border-bottom: none;
+    cursor: text;
+}
+
+/* Style for active pronunciation toggle button */
+.pronunciation-toggle[aria-pressed="true"] {
+    background-color: var(--primary-color, #007acc);
+    color: white;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    .name-with-pronunciation:hover .pronunciation-guide {
+        /* On mobile, show at bottom of screen instead */
+        position: fixed;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 90%;
+        text-align: center;
+    }
+    
+    /* On mobile, touching a name shows pronunciation briefly */
+    .character-name:active + .pronunciation-guide {
+        display: block;
+    }
+}

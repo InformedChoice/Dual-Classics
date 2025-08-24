@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 19 - Pronunciation in Settings Test</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.8;
+            background: #fafafa;
+        }
+        
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007acc;
+            padding-bottom: 10px;
+        }
+        
+        /* Settings Panel Styles */
+        .settings-panel {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .control-group {
+            margin-bottom: 20px;
+        }
+        
+        .control-group:last-child {
+            margin-bottom: 0;
+        }
+        
+        .control-label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .control-buttons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .control-btn {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        
+        .control-btn:hover {
+            border-color: #007acc;
+            background: #f0f8ff;
+        }
+        
+        .control-btn[aria-pressed="true"] {
+            background: #007acc;
+            color: white;
+            border-color: #007acc;
+        }
+        
+        .size-indicator {
+            padding: 0 10px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        /* Pronunciation Guide Styles */
+        .name-with-pronunciation {
+            position: relative;
+            display: inline;
+        }
+
+        .character-name {
+            font-weight: bold;
+            cursor: help;
+            border-bottom: 1px dotted #666;
+        }
+
+        .pronunciation-guide {
+            display: none;
+            position: absolute;
+            background: #333;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 5px;
+            font-weight: normal;
+            font-size: 0.85em;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .name-with-pronunciation:hover .pronunciation-guide {
+            display: block;
+        }
+
+        /* Toggle mode - when pronunciation guides are shown inline */
+        body.show-all-pronunciation .pronunciation-guide {
+            display: inline;
+            position: static;
+            background: none;
+            color: #666;
+            font-style: italic;
+            font-size: 0.9em;
+            margin-left: 4px;
+            transform: none;
+            pointer-events: auto;
+        }
+
+        body.show-all-pronunciation .pronunciation-guide::before {
+            content: "(";
+        }
+
+        body.show-all-pronunciation .pronunciation-guide::after {
+            content: ")";
+        }
+
+        body.show-all-pronunciation .character-name {
+            border-bottom: none;
+            cursor: text;
+        }
+        
+        .bilingual-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .language-section {
+            padding: 15px;
+        }
+        
+        .language-section h3 {
+            margin-top: 0;
+            color: #007acc;
+            font-size: 1.1em;
+        }
+        
+        .info-box {
+            background: #e8f4fd;
+            border: 2px solid #007acc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #007acc;
+        }
+        
+        @media (max-width: 768px) {
+            .bilingual-block {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 19: Mithridates the Spy (Book III, Chapter 3)</h1>
+    
+    <!-- Settings Panel -->
+    <div class="settings-panel">
+        <div class="control-group">
+            <label class="control-label">Language</label>
+            <div class="control-buttons">
+                <button class="control-btn" data-lang="both" aria-pressed="true">
+                    <span class="btn-text">EN + ES</span>
+                </button>
+                <button class="control-btn" data-lang="en" aria-pressed="false">
+                    <span class="btn-text">English</span>
+                </button>
+                <button class="control-btn" data-lang="es" aria-pressed="false">
+                    <span class="btn-text">Español</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Text Size</label>
+            <div class="control-buttons">
+                <button class="control-btn size-btn" data-font="smaller" aria-label="Decrease text size">
+                    <span>−</span>
+                </button>
+                <span class="size-indicator">100%</span>
+                <button class="control-btn size-btn" data-font="bigger" aria-label="Increase text size">
+                    <span>+</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Pronunciation</label>
+            <div class="control-buttons">
+                <button class="control-btn pronunciation-toggle" data-pronunciation="off" aria-pressed="true">
+                    <span class="btn-text">Off</span>
+                </button>
+                <button class="control-btn pronunciation-toggle" data-pronunciation="on" aria-pressed="false">
+                    <span class="btn-text">On</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="info-box">
+        <h3>📚 How Pronunciation Works Now:</h3>
+        <ul>
+            <li><strong>OFF (Default):</strong> Character names have a subtle dotted underline. Hover over them to see pronunciation.</li>
+            <li><strong>ON:</strong> All pronunciation guides appear inline with the text, just like before.</li>
+            <li><strong>Settings are saved!</strong> Your preference is remembered for next time.</li>
+            <li>The pronunciation toggle is now in the settings panel with other reading preferences.</li>
+        </ul>
+    </div>
+    
+    <div class="bilingual-block">
+        <div class="language-section">
+            <h3>English</h3>
+            <p>
+                One morning, <span class="name-with-pronunciation">
+                    <span class="character-name">Mithridates</span>
+                    <span class="pronunciation-guide">mith-ri-DAY-teez</span>
+                </span> rode up with around 30 horsemen. He called for the generals and said, "People of Greece, I've been loyal to Cyrus. Today I'm your friend. I want to join you and help—but only if it's safe. Tell me what you're planning." The generals met and shared their answer—spoken by <span class="name-with-pronunciation">
+                    <span class="character-name">Cheirisophus</span>
+                    <span class="pronunciation-guide">ky-ri-SOH-fus</span>
+                </span>: "We plan to travel through this land without causing harm. If anyone stops us, we'll have to fight—but we'll protect ourselves."
+            </p>
+        </div>
+        <div class="language-section">
+            <h3>Español</h3>
+            <p>
+                Una mañana, <span class="name-with-pronunciation">
+                    <span class="character-name">Mitrídates</span>
+                    <span class="pronunciation-guide">mith-ri-DA-tes</span>
+                </span> llegó con unos 30 jinetes. Llamó a los generales y dijo: "Gente de Grecia, fui leal a Ciro. Hoy soy su amigo. Quiero unirme y ayudar—pero solo si es seguro. Díganme qué planean." Los generales se reunieron y <span class="name-with-pronunciation">
+                    <span class="character-name">Queirisófo</span>
+                    <span class="pronunciation-guide">ky-ri-SO-fos</span>
+                </span> habló: "Vamos a avanzar por esta tierra sin causar daño. Si alguien nos detiene, pelearemos—pero nos defenderemos."
+            </p>
+        </div>
+    </div>
+    
+    <div class="bilingual-block">
+        <div class="language-section">
+            <h3>English</h3>
+            <p>
+                <span class="name-with-pronunciation">
+                    <span class="character-name">Mithridates</span>
+                    <span class="pronunciation-guide">mith-ri-DAY-teez</span>
+                </span> tried to persuade them that without the king's approval, they'd never be safe. Soon, they realized his real mission—he was an agent watching over them. So they agreed: no more truce, no truce heralds—only open, honest fighting if needed. That afternoon, after breakfast, they crossed the <span class="name-with-pronunciation">
+                    <span class="character-name">Zapatēs</span>
+                    <span class="pronunciation-guide">za-PA-teez</span>
+                </span> River, marching in order. As they moved, <span class="name-with-pronunciation">
+                    <span class="character-name">Mithridates</span>
+                    <span class="pronunciation-guide">mith-ri-DAY-teez</span>
+                </span> returned, now leading a few hundred horsemen, bowmen, and slingers—quick and agile fighters—ready to challenge them.
+            </p>
+        </div>
+        <div class="language-section">
+            <h3>Español</h3>
+            <p>
+                <span class="name-with-pronunciation">
+                    <span class="character-name">Mitrídates</span>
+                    <span class="pronunciation-guide">mith-ri-DA-tes</span>
+                </span> trató de convencerlos de que sin permiso del rey, nunca estarían seguros. Pronto se dieron cuenta de su verdadera misión: era un agente que los vigilaba. Decidieron no negociar más—solo pelea abierta si fuera necesario. Esa tarde, tras desayunar, cruzaron el río <span class="name-with-pronunciation">
+                    <span class="character-name">Zapatés</span>
+                    <span class="pronunciation-guide">za-PA-teez</span>
+                </span>, marchando ordenadamente. Mientras avanzaban, <span class="name-with-pronunciation">
+                    <span class="character-name">Mitrídates</span>
+                    <span class="pronunciation-guide">mith-ri-DA-tes</span>
+                </span> regresó con varios cientos de jinetes, arqueros y honderos —rápidos y ágiles—listos para enfrentarlos.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get pronunciation toggle buttons
+            const pronunciationButtons = document.querySelectorAll('.pronunciation-toggle');
+            
+            // Check for saved preference (default is OFF)
+            const savedPref = localStorage.getItem('showPronunciation');
+            const isOn = savedPref === 'true';
+            
+            // Set initial state
+            if (isOn) {
+                document.body.classList.add('show-all-pronunciation');
+                updatePronunciationButtons(true);
+            } else {
+                document.body.classList.remove('show-all-pronunciation');
+                updatePronunciationButtons(false);
+            }
+            
+            // Add click handlers to pronunciation toggle buttons
+            pronunciationButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const wantOn = this.getAttribute('data-pronunciation') === 'on';
+                    
+                    // Update body class
+                    if (wantOn) {
+                        document.body.classList.add('show-all-pronunciation');
+                    } else {
+                        document.body.classList.remove('show-all-pronunciation');
+                    }
+                    
+                    // Update button states
+                    updatePronunciationButtons(wantOn);
+                    
+                    // Save preference
+                    localStorage.setItem('showPronunciation', wantOn);
+                });
+            });
+            
+            // Helper function to update button states
+            function updatePronunciationButtons(isOn) {
+                pronunciationButtons.forEach(btn => {
+                    const btnIsOn = btn.getAttribute('data-pronunciation') === 'on';
+                    btn.setAttribute('aria-pressed', btnIsOn === isOn ? 'true' : 'false');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/css/main.min.ad890043bc92bea7355e3de123c2a787d87e8286cb7269b883c5b04d48884d0e.css" integrity="sha256-rYkAQ7ySvqc1Xj3hI8Knh9h&#43;gobLcmm4g8WwTUiITQ4=" />
+    
+    <link rel="stylesheet" href="/css/pronunciation.css" />
   </head>
   <body class="lang-both">
     <header class="site-header">
@@ -84,8 +86,19 @@
       </button>
     </div>
   </div>
+  
+  <div class="control-group">
+    <label class="control-label">Pronunciation</label>
+    <div class="control-buttons">
+      <button class="control-btn pronunciation-toggle" data-pronunciation="off" aria-pressed="false">
+        <span class="btn-text">Off</span>
+      </button>
+      <button class="control-btn pronunciation-toggle" data-pronunciation="on" aria-pressed="false">
+        <span class="btn-text">On</span>
+      </button>
+    </div>
+  </div>
 </div>
-
 
     </div>
 
@@ -196,5 +209,7 @@
 
 
     <script src="/js/main.js"></script>
+    
+    <script src="/js/pronunciation-toggle.js"></script>
   </body>
   </html>
