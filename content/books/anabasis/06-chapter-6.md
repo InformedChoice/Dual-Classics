@@ -18,9 +18,9 @@ Ciro aceptó y permitió que Orontas se fuera con soldados de varios comandantes
 {{< /bp >}}
 
 {{< bp >}}
-Cyrus called a trial. He gathered seven trustworthy Persians and invited the Greek commanders, including Clearchus (KLEE-ar-kus), to come with 3,000 hoplites—soldiers with heavy armor. In the trial, Cyrus reminded Orontas of their past promises of friendship. He asked if Orontas had wronged him. Orontas admitted he had betrayed Cyrus before. Cyrus and the court asked if Orontas had done wrong again. Orontas said he had to. Then Cyrus asked if Orontas would betray them again—Orontas said probably yes.
+Cyrus called a trial. He gathered seven trustworthy Persians and invited the Greek commanders, including {{< name "Clearchus" "KLEE-ar-kus" >}}, to come with 3,000 hoplites—soldiers with heavy armor. In the trial, Cyrus reminded Orontas of their past promises of friendship. He asked if Orontas had wronged him. Orontas admitted he had betrayed Cyrus before. Cyrus and the court asked if Orontas had done wrong again. Orontas said he had to. Then Cyrus asked if Orontas would betray them again—Orontas said probably yes.
 ---
-Ciro convocó un juicio. Reunió a siete persas de confianza e invitó a los comandantes griegos, incluyendo a Clearco (KLEE-ar-ko), con 3,000 hoplitas —soldados con armadura pesada. En el juicio, Ciro le recordó a Orontas las promesas de amistad. Le preguntó si le había hecho daño. Orontas admitió que lo había traicionado antes. Ciro y el tribunal preguntaron si volvió a hacerlo. Orontas dijo que sí. Entonces Ciro preguntó si lo haría otra vez—Orontas dijo que probablemente sí.
+Ciro convocó un juicio. Reunió a siete persas de confianza e invitó a los comandantes griegos, incluyendo a {{< name "Clearco" "KLEE-ar-ko" >}}, con 3,000 hoplitas —soldados con armadura pesada. En el juicio, Ciro le recordó a Orontas las promesas de amistad. Le preguntó si le había hecho daño. Orontas admitió que lo había traicionado antes. Ciro y el tribunal preguntaron si volvió a hacerlo. Orontas dijo que sí. Entonces Ciro preguntó si lo haría otra vez—Orontas dijo que probablemente sí.
 {{< /bp >}}
 
 {{< bp >}}

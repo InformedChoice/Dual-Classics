@@ -20,6 +20,12 @@ This repo hosts a custom Hugo site for kid‑friendly, bilingual (EN + ES) class
     - Block form: `{{< bp >}} EN text --- ES text {{< /bp >}}`
     - Inline form: `{{< bi en="EN text" es="ES text" >}}`
 
+ - Be exact with chapter naming and front matter:
+   - Filenames must zero‑pad the prefix and match the chapter number: `01-chapter-1.md`, `02-chapter-2.md`, … `10-chapter-10.md`.
+   - In front matter, set both `chapter: <n>` and `weight: <n>` to the same integer so ordering and navigation are correct.
+   - Keep `slug` aligned with the filename unless there’s a strong reason to override.
+   - Title convention: `Chapter <n>: <short, kid‑friendly title>` (EN/ES handled in content, not in the title).
+
 2) Style tweaks
 - Edit `themes/dualkids/assets/css/main.css` for colors/spacing.
 - Use site params in `hugo.toml` to adjust primary/secondary/accent colors and tagline.
@@ -37,6 +43,22 @@ This repo hosts a custom Hugo site for kid‑friendly, bilingual (EN + ES) class
 5) Shortcodes
 - Bilingual paragraph `bp` lives at `themes/dualkids/layouts/shortcodes/bp.html`.
 - Extend by adding `note` or `vocab` shortcodes if needed in the same folder.
+
+Pronunciation hints (use consistently)
+- Use the `name` shortcode for names with phonetics so they participate in the Pronunciation On/Off toggle.
+  - English: `{{< name "Xenophon" "ZEN-uh-fawn" >}}`
+  - Español: `{{< name "Jenofonte" "heh-no-FAWN-te" >}}`
+- Do not hard‑code hints like `Cyrus (SY-rus)` — those won’t toggle. Convert to the shortcode.
+- Consistency rules:
+  - Add on first mention in each language; repeat only after long gaps or for tricky names.
+  - Keep phonetics simple, hyphenated; UPPERCASE the stressed syllable. Avoid IPA.
+  - Match the language: use the EN name + EN phonetics in English, ES name + ES phonetics in Spanish.
+  - Keep punctuation outside the shortcode, e.g., `{{< name "Cyrus" "SY-rus" >}}, the prince, …`
+- How it works (FYI):
+  - Shortcode: `themes/dualkids/layouts/shortcodes/name.html` renders the name and hint spans.
+  - Styles: `static/css/pronunciation.css` controls tooltip vs inline display.
+  - Toggle + persistence: `static/js/pronunciation-toggle.js` and the buttons in `themes/dualkids/layouts/partials/reading-controls.html` add `show-all-pronunciation` to `<body>` and remember the user’s choice.
+  - Nothing extra to wire up — just use the shortcode in content.
 
 6) Deploy
 

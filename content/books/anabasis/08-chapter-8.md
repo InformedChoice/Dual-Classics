@@ -12,15 +12,15 @@ Era casi la hora del mercado cuando un hombre llamado {{< name "Patego" "pa-TEH-
 {{< /bp >}}
 
 {{< bp >}}
-Cyrus (SY-rus) jumped out of his carriage and put on his armor quickly. Then he jumped onto his horse and gave the order for everyone else to arm themselves and get into battle formation.
+{{< name "Cyrus" "SY-rus" >}} jumped out of his carriage and put on his armor quickly. Then he jumped onto his horse and gave the order for everyone else to arm themselves and get into battle formation.
 ---
-Ciro (SEE-ro) saltó de su carruaje y se puso la armadura rápidamente. Luego montó su caballo y dio la orden para que todos se armara y formaran filas de batalla.
+{{< name "Ciro" "SEE-ro" >}} saltó de su carruaje y se puso la armadura rápidamente. Luego montó su caballo y dio la orden para que todos se armara y formaran filas de batalla.
 {{< /bp >}}
 
 {{< bp >}}
-The soldiers followed immediately. Clearchus (KLEE-ar-kus) and his men took the right side by the Euphrates River. {{< name "Proxenus" "proh-XEE-nus" >}} was next, and Menon (MEH-non) with his troops took the left. Cyrus had around 600 horsemen wearing armor like his—and even the horses had armor too! But Cyrus didn't wear a helmet himself.
+The soldiers followed immediately. {{< name "Clearchus" "KLEE-ar-kus" >}} and his men took the right side by the Euphrates River. {{< name "Proxenus" "proh-XEE-nus" >}} was next, and {{< name "Menon" "MEH-non" >}} with his troops took the left. Cyrus had around 600 horsemen wearing armor like his—and even the horses had armor too! But Cyrus didn't wear a helmet himself.
 ---
-Los soldados obedecieron de inmediato. Clearco (KLEE-ar-ko) y sus hombres tomaron el lado derecho junto al Éufrates. {{< name "Proxeno" "pro-XEE-no" >}} estaba después, y Menón (MEH-non) con sus tropas tomó la izquierda. Ciro tenía unos 600 jinetes con armadura como la suya, ¡y hasta los caballos llevaban armadura! Pero Ciro no llevaba casco.
+Los soldados obedecieron de inmediato. {{< name "Clearco" "KLEE-ar-ko" >}} y sus hombres tomaron el lado derecho junto al Éufrates. {{< name "Proxeno" "pro-XEE-no" >}} estaba después, y {{< name "Menón" "MEH-non" >}} con sus tropas tomó la izquierda. Ciro tenía unos 600 jinetes con armadura como la suya, ¡y hasta los caballos llevaban armadura! Pero Ciro no llevaba casco.
 {{< /bp >}}
 
 {{< bp >}}
@@ -30,7 +30,7 @@ Al mediodía no se veía al enemigo. Pero por la tarde, vieron polvo en la dista
 {{< /bp >}}
 
 {{< bp >}}
-Cyrus rode by with his friend Pigres (PIH-gres) and his interpreter. He told Clearchus to attack the enemy's middle, because that's where the king likely was. Clearchus didn't move, worried he'd get surrounded. Cyrus told them the omens were good and introduced the watchword: "Zeus our Saviour and Victory". Soon the Greek soldiers began shouting and running forward. The enemy turned and ran away!
+Cyrus rode by with his friend {{< name "Pigres" "PIH-gres" >}} and his interpreter. He told Clearchus to attack the enemy's middle, because that's where the king likely was. Clearchus didn't move, worried he'd get surrounded. Cyrus told them the omens were good and introduced the watchword: "Zeus our Saviour and Victory". Soon the Greek soldiers began shouting and running forward. The enemy turned and ran away!
 ---
-Ciro pasó con su amigo Pigres (PIG-res) y su intérprete. Le dijo a Clearco que atacara el centro del enemigo—allí estaría el rey. Clearco no se movió, por miedo a ser rodeado. Ciro dijo que los eventos señalaban buena suerte y dijo la palabra clave del campo: "Zeus nuestro Salvador y Victoria". Pronto, los soldados griegos gritaron y corrieron hacia adelante. ¡El enemigo se dio la vuelta y huyó!
+Ciro pasó con su amigo {{< name "Pigres" "PIG-res" >}} y su intérprete. Le dijo a Clearco que atacara el centro del enemigo—allí estaría el rey. Clearco no se movió, por miedo a ser rodeado. Ciro dijo que los eventos señalaban buena suerte y dijo la palabra clave del campo: "Zeus nuestro Salvador y Victoria". Pronto, los soldados griegos gritaron y corrieron hacia adelante. ¡El enemigo se dio la vuelta y huyó!
 {{< /bp >}}

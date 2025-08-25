@@ -6,9 +6,9 @@ summary: "The soldiers refuse to march and Clearchus must choose between Cyrus a
 ---
 
 {{< bp >}}
-The army stopped at Tarsus (TAR-sus) for twenty days. The soldiers didn't want to go on. They were scared. They believed their journey wasn't really to fight enemies, but to fight the king instead. They felt their job wasn't what they signed up for. Clearchus (KLEE-ar-kus), one of the army leaders, tried to make them march again. But as he stepped forward, they threw stones at him and his pack—he nearly got hurt badly.
+The army stopped at {{< name "Tarsus" "TAR-sus" >}} for twenty days. The soldiers didn't want to go on. They were scared. They believed their journey wasn't really to fight enemies, but to fight the king instead. They felt their job wasn't what they signed up for. {{< name "Clearchus" "KLEE-ar-kus" >}}, one of the army leaders, tried to make them march again. But as he stepped forward, they threw stones at him and his pack—he nearly got hurt badly.
 ---
-El ejército se detuvo en Tarso (TAR-so) durante veinte días. Los soldados no querían avanzar. Tenían miedo. Creían que su viaje no era para luchar contra enemigos, sino para pelear contra el rey. Sentían que eso no era lo que habían aceptado. Clearco (KLEE-ar-ko), uno de los líderes del ejército, intentó que marcharan de nuevo. Pero al dar un paso, ellos empezaron a lanzarle piedras a él y a su carga —casi resulta gravemente herido.
+El ejército se detuvo en {{< name "Tarso" "TAR-so" >}} durante veinte días. Los soldados no querían avanzar. Tenían miedo. Creían que su viaje no era para luchar contra enemigos, sino para pelear contra el rey. Sentían que eso no era lo que habían aceptado. {{< name "Clearco" "KLEE-ar-ko" >}}, uno de los líderes del ejército, intentó que marcharan de nuevo. Pero al dar un paso, ellos empezaron a lanzarle piedras a él y a su carga —casi resulta gravemente herido.
 {{< /bp >}}
 
 {{< bp >}}

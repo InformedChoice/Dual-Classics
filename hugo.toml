@@ -26,7 +26,7 @@ enableRobotsTXT = true
 [outputs]
   home = ["HTML"]
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy", "term"]
 
 [menu]
   [[menu.main]]

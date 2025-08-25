@@ -12,9 +12,9 @@ Antes del amanecer, los nuevos líderes reunieron a sus soldados en el campament
 {{< /bp >}}
 
 {{< bp >}}
-Then Cleanor (KLEE-nor) of Ochyomenus spoke: "Look how the king betrayed us. {{< name "Tissaphernes" "tis-uh-FER-neez" >}} promised to help us and even swore to keep his word—but he trapped and arrested our generals. He didn't honor the gods or respect Cyrus. {{< name "And Ariaeus" "a-ree-AY-us" >}}—whom we even offered might have become king—betrayed us too. May the gods take care of them. But us? We will be brave. We won't be fooled again. We'll do our best fight, and then accept whatever happens."
+Then {{< name "Cleanor" "KLEE-nor" >}} of Ochyomenus spoke: "Look how the king betrayed us. {{< name "Tissaphernes" "tis-uh-FER-neez" >}} promised to help us and even swore to keep his word—but he trapped and arrested our generals. He didn't honor the gods or respect Cyrus. {{< name "And Ariaeus" "a-ree-AY-us" >}}—whom we even offered might have become king—betrayed us too. May the gods take care of them. But us? We will be brave. We won't be fooled again. We'll do our best fight, and then accept whatever happens."
 ---
-Luego habló Cleanor (KLEE-nor) de Oquómeno: "Vean cómo el rey nos traicionó. {{< name "Tisasfernes" "tis-uh-FER-nes" >}} prometió ayudarnos e incluso juró cumplirlo—pero traicionó y arrestó a nuestros generales. No respetó a los dioses ni honró a Ciro. Y {{< name "Ariaeus" "a-ree-AY-us" >}}—a quien incluso ofrecimos como posible rey—también nos traicionó. Que los dioses los castiguen. Pero nosotros… seremos valientes. No caeremos más en engaños. Pelearemos lo mejor que podamos, y luego aceptaremos lo que venga."
+Luego habló {{< name "Cleanor" "KLEE-nor" >}} de Oquómeno: "Vean cómo el rey nos traicionó. {{< name "Tisasfernes" "tis-uh-FER-nes" >}} prometió ayudarnos e incluso juró cumplirlo—pero traicionó y arrestó a nuestros generales. No respetó a los dioses ni honró a Ciro. Y {{< name "Ariaeus" "a-ree-AY-us" >}}—a quien incluso ofrecimos como posible rey—también nos traicionó. Que los dioses los castiguen. Pero nosotros… seremos valientes. No caeremos más en engaños. Pelearemos lo mejor que podamos, y luego aceptaremos lo que venga."
 {{< /bp >}}
 
 {{< bp >}}

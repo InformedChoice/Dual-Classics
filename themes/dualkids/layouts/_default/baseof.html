@@ -11,91 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Dark Mode MUST come BEFORE main.css -->
-    <style>
-      /* Dark mode - default - HIGHEST PRIORITY */
-      html:not(.light-mode) body,
-      body:not(.light-mode) {
-        background-color: #1a1611 !important;
-        background: #1a1611 !important;
-        color: #e8d7c3 !important;
-      }
-      
-      /* Override the --bg variable that main.css uses */
-      body:not(.light-mode) {
-        --bg: #1a1611 !important;
-        --ink: #e8d7c3 !important;
-        --ink-dim: #a89577 !important;
-      }
-      
-      /* Light mode - when toggled */
-      html.light-mode body,
-      body.light-mode {
-        background-color: #fffdf8 !important;
-        background: #fffdf8 !important;
-        color: #212121 !important;
-        --bg: #fffdf8 !important;
-        --ink: #212121 !important;
-        --ink-dim: #666 !important;
-      }
-    </style>
-    
     {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "css/main.css" . | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
     
-    <!-- Dark Mode Additional Styles - AFTER main.css -->
-    <style>
-      /* Icon visibility */
-      .theme-toggle-btn .sun-icon { display: none !important; }
-      .theme-toggle-btn .moon-icon { display: block !important; }
-      body.light-mode .theme-toggle-btn .sun-icon { display: block !important; }
-      body.light-mode .theme-toggle-btn .moon-icon { display: none !important; }
-      
-      /* Dark mode for elements */
-      body:not(.light-mode) .chapter-top-bar {
-        background: rgba(26, 22, 17, 0.98) !important;
-      }
-      
-      body:not(.light-mode) .readable .bp {
-        background: #252119 !important;
-        border-left-color: #ffa94d !important;
-      }
-      
-      body:not(.light-mode) .nav-card,
-      body:not(.light-mode) .chapter-dropdown,
-      body:not(.light-mode) .reading-settings-toggle,
-      body:not(.light-mode) .theme-toggle-btn,
-      body:not(.light-mode) .control-btn {
-        background: #252119 !important;
-        border-color: rgba(232, 215, 195, 0.1) !important;
-        color: #e8d7c3 !important;
-      }
-      
-      body:not(.light-mode) .reading-panel {
-        background: #252119 !important;
-      }
-      
-      /* Fix white background on main container */
-      body:not(.light-mode) .container,
-      body:not(.light-mode) .chapter,
-      body:not(.light-mode) main {
-        background: transparent !important;
-      }
-    </style>
-    
     <link rel="stylesheet" href="{{ "css/pronunciation.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/chapter-navigation.css" | relURL }}" />
-    
-    <!-- Apply theme immediately -->
-    <script>
-      (function() {
-        var savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-          document.documentElement.classList.add('light-mode');
-          document.body?.classList.add('light-mode');
-        }
-      })();
-    </script>
   </head>
   <body class="lang-both">
     {{ partial "header.html" . }}
@@ -106,36 +26,77 @@
     <script src="{{ "js/main.js" | relURL }}"></script>
     <script src="{{ "js/pronunciation-toggle.js" | relURL }}"></script>
     
-    <!-- Dark mode settings panel integration -->
+    <!-- Force dark mode with immediate execution -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Apply saved theme to body
-        var savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-          document.body.classList.add('light-mode');
-        } else {
-          document.body.classList.remove('light-mode');
+      (function() {
+        function forceDarkMode() {
+          // Body
+          document.body.classList.add('dark-mode-active');
+          document.body.style.backgroundColor = '#1a1611';
+          document.body.style.color = '#f0e0d0';
+          
+          // Force header styles
+          var header = document.querySelector('.site-header');
+          if (header) {
+            // Use setAttribute to force override
+            header.setAttribute('style', 'background-color: #1f1b16 !important; background: #1f1b16 !important; border-bottom: 3px solid #ff9944 !important;');
+            console.log('Dark mode applied to header');
+          } else {
+            console.log('Header not found, retrying...');
+            setTimeout(forceDarkMode, 100);
+          }
+          
+          // Brand title
+          var title = document.querySelector('.site-header .title');
+          if (title) {
+            title.style.color = '#ffd4a3';
+          }
+          
+          // Nav links
+          document.querySelectorAll('.site-header .site-nav a').forEach(function(link) {
+            link.style.color = '#f0e0d0';
+          });
+          
+          // Footer
+          var footer = document.querySelector('.site-footer');
+          if (footer) {
+            footer.setAttribute('style', 'background-color: #1f1b16 !important; border-top: 3px solid #ff9944 !important;');
+          }
         }
         
-        // Settings panel theme buttons
-        var themeButtons = document.querySelectorAll('.theme-setting');
-        themeButtons.forEach(function(btn) {
-          btn.addEventListener('click', function() {
-            var theme = this.getAttribute('data-theme');
-            if (theme === 'light') {
-              document.body.classList.add('light-mode');
-            } else {
-              document.body.classList.remove('light-mode');
-            }
-            localStorage.setItem('theme', theme);
-            
-            // Update button states
-            themeButtons.forEach(function(b) {
-              b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
-            });
+        function forceLightMode() {
+          document.body.classList.remove('dark-mode-active');
+          document.body.style.backgroundColor = '';
+          document.body.style.color = '';
+          
+          var header = document.querySelector('.site-header');
+          if (header) header.removeAttribute('style');
+          
+          var title = document.querySelector('.site-header .title');
+          if (title) title.style.color = '';
+          
+          document.querySelectorAll('.site-header .site-nav a').forEach(function(link) {
+            link.style.color = '';
           });
-        });
-      });
+          
+          var footer = document.querySelector('.site-footer');
+          if (footer) footer.removeAttribute('style');
+        }
+        
+        // Check theme and apply
+        if (localStorage.getItem('theme') !== 'light') {
+          forceDarkMode();
+          // Run again after a delay to ensure it sticks
+          setTimeout(forceDarkMode, 500);
+          setTimeout(forceDarkMode, 1000);
+        } else {
+          forceLightMode();
+        }
+        
+        // Make these functions global for toggle button
+        window.applyDarkMode = forceDarkMode;
+        window.applyLightMode = forceLightMode;
+      })();
     </script>
   </body>
   </html>

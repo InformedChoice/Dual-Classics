@@ -6,9 +6,9 @@ summary: "The army prepares for battle as the king's forces draw near."
 ---
 
 {{< bp >}}
-From their last camp, Cyrus (SY-rus) led the whole army forward—Greeks and others—marching one more stage—about three parasangs—to a new place. They walked carefully in battle order, ready for anything.
+From their last camp, {{< name "Cyrus" "SY-rus" >}} led the whole army forward—Greeks and others—marching one more stage—about three parasangs—to a new place. They walked carefully in battle order, ready for anything.
 ---
-Desde su último campamento, Ciro (SEE-ro) guió a todo el ejército—griegos y otros soldados—avanzando una etapa más—unos tres parasangas—a un nuevo lugar. Marcharon con cuidado, formando filas de batalla, listos para cualquier cosa.
+Desde su último campamento, {{< name "Ciro" "SEE-ro" >}} guió a todo el ejército—griegos y otros soldados—avanzando una etapa más—unos tres parasangas—a un nuevo lugar. Marcharon con cuidado, formando filas de batalla, listos para cualquier cosa.
 {{< /bp >}}
 
 {{< bp >}}

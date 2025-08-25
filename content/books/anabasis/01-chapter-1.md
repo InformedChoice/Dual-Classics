@@ -6,9 +6,9 @@ summary: "Cyrus wants to be king."
 ---
 
 {{< bp >}}
-Darius (DAIR-ee-us) and his wife {{< name "Parysatis" "pa-RY-sa-tiss" >}} had two sons. The older son was {{< name "Artaxerxes" "ar-TAK-serk-sees" >}} and the younger was Cyrus (SY-rus).
+{{< name "Darius" "DAIR-ee-us" >}} and his wife {{< name "Parysatis" "pa-RY-sa-tiss" >}} had two sons. The older son was {{< name "Artaxerxes" "ar-TAK-serk-sees" >}} and the younger was {{< name "Cyrus" "SY-rus" >}}.
 ---
-Darío (DA-ree-o) y su esposa {{< name "Parysatis" "pa-RY-sa-tis" >}} tuvieron dos hijos. El mayor fue {{< name "Artajerjes" "ar-ta-HER-hes" >}} y el más joven fue Ciro (SEE-ro).
+{{< name "Darío" "DA-ree-o" >}} y su esposa {{< name "Parysatis" "pa-RY-sa-tis" >}} tuvieron dos hijos. El mayor fue {{< name "Artajerjes" "ar-ta-HER-hes" >}} y el más joven fue {{< name "Ciro" "SEE-ro" >}}.
 {{< /bp >}}
 
 {{< bp >}}
@@ -52,4 +52,3 @@ Cyrus also made friends quietly. He gathered Greek soldiers, hoping to surprise 
 ---
 Ciro también consiguió amigos en secreto. Reunió soldados griegos, con la esperanza de sorprender a su hermano y ganar.
 {{< /bp >}}
-

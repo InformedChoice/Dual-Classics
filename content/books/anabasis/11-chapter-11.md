@@ -6,9 +6,9 @@ summary: "The Greek leaders decide their next steps after Cyrus's death and face
 ---
 
 {{< bp >}}
-After Cyrus died, the Greek leaders met and decided what to do next. They sent messengers to {{< name "Ariaeus" "ah-ree-AY-us" >}}, one of Cyrus's remaining allies. Clearchus (KLEE-ar-kus), the Spartan leader, said: "If Ariaeus joins us, we can make him king. After all, the man who wins doesn't sit and give up—he takes charge." So they sent the message back, hoping Ariaeus would agree.
+After Cyrus died, the Greek leaders met and decided what to do next. They sent messengers to {{< name "Ariaeus" "ah-ree-AY-us" >}}, one of Cyrus's remaining allies. {{< name "Clearchus" "KLEE-ar-kus" >}}, the Spartan leader, said: "If Ariaeus joins us, we can make him king. After all, the man who wins doesn't sit and give up—he takes charge." So they sent the message back, hoping Ariaeus would agree.
 ---
-Después de la muerte de Ciro, los líderes griegos se reunieron para decidir qué hacer. Enviaron mensajes a {{< name "Ariaeus" "a-ree-AY-us" >}}, uno de los aliados que quedaban de Ciro. Clearco (KLEE-ar-ko), el líder espartano, dijo: "Si Ariaeus se une a nosotros, podemos hacerlo rey. Al fin y al cabo, quien gana no se rinde, toma la iniciativa." Así enviaron el mensaje esperando que Ariaeus aceptara.
+Después de la muerte de Ciro, los líderes griegos se reunieron para decidir qué hacer. Enviaron mensajes a {{< name "Ariaeus" "a-ree-AY-us" >}}, uno de los aliados que quedaban de Ciro. {{< name "Clearco" "KLEE-ar-ko" >}}, el líder espartano, dijo: "Si Ariaeus se une a nosotros, podemos hacerlo rey. Al fin y al cabo, quien gana no se rinde, toma la iniciativa." Así enviaron el mensaje esperando que Ariaeus aceptara.
 {{< /bp >}}
 
 {{< bp >}}

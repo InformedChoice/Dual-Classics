@@ -6,9 +6,9 @@ summary: "The Greeks negotiate a truce with the king and cross difficult terrain
 ---
 
 {{< bp >}}
-Suddenly, heralds came from the king to the front of the army and asked to see the generals. Clearchus (KLEE-ar-kus), who was inspecting the rows of soldiers, told them to wait. He arranged the troops so they looked like a strong, unbroken battle line, with no one unarmed in sight. Then he told the heralds he would speak with them soon.
+Suddenly, heralds came from the king to the front of the army and asked to see the generals. {{< name "Clearchus" "KLEE-ar-kus" >}}, who was inspecting the rows of soldiers, told them to wait. He arranged the troops so they looked like a strong, unbroken battle line, with no one unarmed in sight. Then he told the heralds he would speak with them soon.
 ---
-De repente, heraldos enviados por el rey llegaron al frente del ejército y pidieron ver a los generales. Clearco (KLEE-ar-ko), que estaba revisando las filas de soldados, les pidió que esperaran. Organizó a las tropas para que parecieran un frente fuerte e ininterrumpido, sin nadie desarmado a la vista. Luego les dijo que hablaría con ellos en un momento.
+De repente, heraldos enviados por el rey llegaron al frente del ejército y pidieron ver a los generales. {{< name "Clearco" "KLEE-ar-ko" >}}, que estaba revisando las filas de soldados, les pidió que esperaran. Organizó a las tropas para que parecieran un frente fuerte e ininterrumpido, sin nadie desarmado a la vista. Luego les dijo que hablaría con ellos en un momento.
 {{< /bp >}}
 
 {{< bp >}}
