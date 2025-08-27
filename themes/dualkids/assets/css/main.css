@@ -691,3 +691,196 @@ button { min-height: 42px; }
 
 /* Utility: ensure .hidden works (for timer toggle) */
 .hidden { display: none !important; }
+
+/* Reading Controls Panel Improvements */
+.reading-panel {
+  position: sticky;
+  top: 60px;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 0 -1rem;
+  transition: all 0.3s ease;
+}
+
+.reading-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.control-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.control-btn {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.control-btn:hover {
+  background: #f8f8f8;
+  border-color: #bbb;
+  transform: translateY(-1px);
+}
+
+.control-btn[aria-pressed="true"] {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  font-weight: 600;
+}
+
+.size-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.size-indicator {
+  font-weight: 700;
+  color: #333;
+  min-width: 45px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Timer Toggle Button */
+#timer-toggle {
+  background: linear-gradient(135deg, #ff9944 0%, #ff7722 100%);
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+#timer-toggle:hover {
+  background: linear-gradient(135deg, #ff7722 0%, #ff5500 100%);
+  transform: scale(1.05);
+}
+
+#timer-toggle[aria-pressed="true"] {
+  background: #666;
+}
+
+/* Mobile Settings Panel */
+@media (max-width: 640px) {
+  .reading-panel {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+    border-bottom: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0.75rem;
+    margin: 0;
+  }
+  
+  .reading-controls {
+    padding: 0;
+  }
+  
+  .control-group {
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 12px;
+  }
+  
+  .control-label {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .control-btn {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.8rem;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .control-btn .btn-text {
+    font-size: 0.75rem;
+  }
+  
+  .size-btn {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 auto;
+  }
+  
+  .size-indicator {
+    font-size: 0.85rem;
+  }
+}
+
+/* Desktop Settings Panel */
+@media (min-width: 768px) {
+  .reading-controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .control-group {
+    flex: 0 1 auto;
+    min-width: 150px;
+  }
+}
+
+/* Animation for panel toggle */
+.reading-panel[hidden] {
+  display: block !important;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (min-width: 641px) {
+  .reading-panel[hidden] {
+    transform: translateY(-100%);
+  }
+}
+
+.reading-panel:not([hidden]) {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}

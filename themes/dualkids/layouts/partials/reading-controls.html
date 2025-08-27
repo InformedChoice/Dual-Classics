@@ -5,10 +5,10 @@
       <button class="control-btn" data-lang="both" aria-pressed="true">
         <span class="btn-text">EN + ES</span>
       </button>
-      <button class="control-btn" data-lang="en">
+      <button class="control-btn" data-lang="en" aria-pressed="false">
         <span class="btn-text">English</span>
       </button>
-      <button class="control-btn" data-lang="es">
+      <button class="control-btn" data-lang="es" aria-pressed="false">
         <span class="btn-text">Español</span>
       </button>
     </div>
@@ -35,7 +35,7 @@
   <div class="control-group">
     <label class="control-label">Pronunciation</label>
     <div class="control-buttons">
-      <button class="control-btn pronunciation-toggle" data-pronunciation="off" aria-pressed="false">
+      <button class="control-btn pronunciation-toggle" data-pronunciation="off" aria-pressed="true">
         <span class="btn-text">Off</span>
       </button>
       <button class="control-btn pronunciation-toggle" data-pronunciation="on" aria-pressed="false">
@@ -57,25 +57,11 @@
   </div>
 
   <div class="control-group">
-    <label class="control-label">Timer</label>
+    <label class="control-label">Reading Timer</label>
     <div class="control-buttons">
       <button id="timer-toggle" class="control-btn" aria-pressed="false">
-        <span class="btn-text">⏱ Timer</span>
+        <span class="btn-text">⏱ Show Timer</span>
       </button>
     </div>
   </div>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const toggle = document.getElementById('timer-toggle');
-    const panel = document.getElementById('reader-timer-panel');
-    if (toggle && panel) {
-      toggle.addEventListener('click', function () {
-        panel.classList.toggle('hidden');
-        const pressed = toggle.getAttribute('aria-pressed') === 'true';
-        toggle.setAttribute('aria-pressed', pressed ? 'false' : 'true');
-      });
-    }
-  });
-</script>
