@@ -319,7 +319,7 @@
 </style>
 
 <script>
-(() => {
+document.addEventListener('DOMContentLoaded', function() {
   const el = (id) => document.getElementById(id);
   const panel = el('reader-timer-panel');
   const display = el('rt-display');
@@ -532,6 +532,10 @@
     const timerToggle = document.getElementById('timer-toggle');
     if (timerToggle) {
       timerToggle.setAttribute('aria-pressed', 'false');
+      const btnText = timerToggle.querySelector('.btn-text');
+      if (btnText) {
+        btnText.textContent = '⏱ Show Timer';
+      }
     }
   });
 
@@ -548,5 +552,5 @@
   // Initialize
   load();
   updateButtons();
-})();
+});
 </script>

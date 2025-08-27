@@ -712,6 +712,39 @@ button { min-height: 42px; }
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  position: relative;
+}
+
+.settings-close-btn {
+  position: absolute;
+  top: -0.25rem;
+  right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.settings-close-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.dark-mode-active .settings-close-btn {
+  color: #a89577;
+}
+
+.dark-mode-active .settings-close-btn:hover {
+  background: rgba(255, 169, 77, 0.1);
+  color: #ffd4a3;
 }
 
 .control-group {
@@ -779,20 +812,37 @@ button { min-height: 42px; }
 }
 
 /* Timer Toggle Button */
-#timer-toggle {
+#timer-toggle, .timer-btn {
   background: linear-gradient(135deg, #ff9944 0%, #ff7722 100%);
-  color: white;
+  color: white !important;
   border: none;
   font-weight: 600;
+  min-width: 120px;
+  cursor: pointer;
 }
 
-#timer-toggle:hover {
+#timer-toggle:hover, .timer-btn:hover {
   background: linear-gradient(135deg, #ff7722 0%, #ff5500 100%);
   transform: scale(1.05);
+  color: white !important;
 }
 
-#timer-toggle[aria-pressed="true"] {
+#timer-toggle[aria-pressed="true"], .timer-btn[aria-pressed="true"] {
   background: #666;
+  color: white !important;
+}
+
+.dark-mode-active #timer-toggle,
+.dark-mode-active .timer-btn {
+  background: linear-gradient(135deg, #ff9944 0%, #ff7722 100%);
+  color: white !important;
+  border: none;
+}
+
+.dark-mode-active #timer-toggle:hover,
+.dark-mode-active .timer-btn:hover {
+  background: linear-gradient(135deg, #ff7722 0%, #ff5500 100%);
+  color: white !important;
 }
 
 /* Mobile Settings Panel */
@@ -809,12 +859,16 @@ button { min-height: 42px; }
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 20px 20px 0 0;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-    padding: 1rem 0.75rem;
+    padding: 2rem 0.75rem 1rem;
     margin: 0;
   }
   
   .reading-controls {
     padding: 0;
+  }
+  
+  .settings-close-btn {
+    display: flex;
   }
   
   .control-group {
