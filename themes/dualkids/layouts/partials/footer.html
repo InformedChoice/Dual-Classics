@@ -4,7 +4,8 @@
     {{ $start := printf "%v" (or site.Params.copyrightStartYear $current) }}
     <p>
       © {{ if eq $start $current }}{{ $current }}{{ else }}{{ $start }}-{{ $current }}{{ end }} Dual Classics ·
-      <a href="{{ "/privacy/" | relURL }}">Privacy</a>
+      <a href="{{ "/privacy/" | relURL }}">Privacy</a> ·
+      <a href="{{ "/terms/" | relURL }}">Terms</a>
     </p>
     <p class="small">Public domain classics, retold for kids.</p>
   </div>
