@@ -14,6 +14,7 @@ enableRobotsTXT = true
   secondaryColor = "#4ECDC4"    # teal
   accentColor = "#FFE66D"       # sunny yellow
   footerNote = "Public domain classics, retold for kids."
+  copyrightStartYear = 2025
 
 [markup]
   [markup.goldmark]

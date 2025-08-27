@@ -1,7 +1,11 @@
 <footer class="site-footer">
   <div class="wrap">
-    <p>{{ site.Params.footerNote }}</p>
-    <p class="small">Site built with Hugo · <a href="https://github.com/">GitHub Pages</a></p>
+    {{ $current := now | dateFormat "2006" }}
+    {{ $start := printf "%v" (or site.Params.copyrightStartYear $current) }}
+    <p>
+      © {{ if eq $start $current }}{{ $current }}{{ else }}{{ $start }}-{{ $current }}{{ end }} Dual Classics ·
+      <a href="{{ "/privacy/" | relURL }}">Privacy</a>
+    </p>
+    <p class="small">Public domain classics, retold for kids.</p>
   </div>
 </footer>
-
