@@ -34,28 +34,52 @@
     </div>
 
     <nav class="chapter-navigation">
-      {{ $prev := .PrevInSection }}
-      {{ $next := .NextInSection }}
-      <div class="nav-grid">
-        {{ if $prev }}
-          <a class="nav-card nav-prev" href="{{ $prev.RelPermalink }}">
-            <span class="nav-label">Previous</span>
-            <span class="nav-title">{{ $prev.Title }}</span>
-          </a>
-        {{ else }}
-          <div></div>
+      {{ $chapters := .Parent.Pages.ByWeight }}
+      {{ $currentIndex := -1 }}
+      {{ $currentWeight := .Weight }}
+      
+      {{ range $index, $page := $chapters }}
+        {{ if eq $page.RelPermalink $.RelPermalink }}
+          {{ $currentIndex = $index }}
         {{ end }}
-        {{ if $next }}
-          <a class="nav-card nav-next" href="{{ $next.RelPermalink }}">
-            <span class="nav-label">Next</span>
-            <span class="nav-title">{{ $next.Title }}</span>
+      {{ end }}
+      
+      {{ $prevChapter := false }}
+      {{ $nextChapter := false }}
+      
+      {{ if gt $currentIndex 0 }}
+        {{ $prevChapter = index $chapters (sub $currentIndex 1) }}
+      {{ end }}
+      
+      {{ if lt $currentIndex (sub (len $chapters) 1) }}
+        {{ $nextChapter = index $chapters (add $currentIndex 1) }}
+      {{ end }}
+      
+      <div class="nav-grid">
+        {{ if $prevChapter }}
+          <a class="nav-card nav-prev" href="{{ $prevChapter.RelPermalink }}">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">{{ $prevChapter.Title }}</span>
           </a>
         {{ else }}
-          <div></div>
+          <div class="nav-card nav-disabled">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title nav-muted">This is the first chapter</span>
+          </div>
+        {{ end }}
+        {{ if $nextChapter }}
+          <a class="nav-card nav-next" href="{{ $nextChapter.RelPermalink }}">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">{{ $nextChapter.Title }}</span>
+          </a>
+        {{ else }}
+          <div class="nav-card nav-disabled">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title nav-muted">You've reached the end!</span>
+          </div>
         {{ end }}
       </div>
       
-      {{ $chapters := .Parent.Pages.ByWeight }}
       {{ if gt (len $chapters) 2 }}
         <div class="chapter-selector">
           <select class="chapter-dropdown" onchange="if(this.value) location.href=this.value">
@@ -123,9 +147,20 @@
       color: #f0e0d0 !important;
     }
     
-    .dark-mode-active .nav-card:hover {
+    .dark-mode-active a.nav-card:hover {
       background: #332b25 !important;
       border-color: #ff9944 !important;
+    }
+    
+    .dark-mode-active .nav-card.nav-disabled {
+      background: rgba(42, 37, 32, 0.4) !important;
+      border-color: rgba(255, 169, 77, 0.1) !important;
+      opacity: 0.5;
+    }
+    
+    .dark-mode-active .nav-muted {
+      color: rgba(240, 224, 208, 0.4) !important;
+      font-style: italic;
     }
     
     .dark-mode-active .nav-label {

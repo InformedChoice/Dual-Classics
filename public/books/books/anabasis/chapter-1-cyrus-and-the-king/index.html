@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/css/main.min.63b28290bf11425c38d345975a0382c818ed62db799c1090b5985ac2cdc468a5.css" integrity="sha256-Y7KCkL8RQlw400WXWgOCyBjtYtt5nBCQtZhaws3EaKU=" />
+    <link rel="stylesheet" href="/css/main.min.a34d496e83709172160e13da876d6941dee3868555784890701ebe93437b1d05.css" integrity="sha256-o01JboNwkXIWDhPah21pQd7jhoVVeEiQcB6&#43;k0N7HQU=" />
     
     <link rel="stylesheet" href="/css/pronunciation.css" />
   </head>
@@ -848,18 +848,87 @@ document.addEventListener('DOMContentLoaded', function() {
     <nav class="chapter-navigation">
       
       
+      
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      
       <div class="nav-grid">
         
-          <a class="nav-card nav-prev" href="/books/books/anabasis/chapter-2-march-to-celaenae/">
-            <span class="nav-label">Previous</span>
+          <div class="nav-card nav-disabled">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title nav-muted">This is the first chapter</span>
+          </div>
+        
+        
+          <a class="nav-card nav-next" href="/books/books/anabasis/chapter-2-march-to-celaenae/">
+            <span class="nav-label">Next →</span>
             <span class="nav-title">Chapter 2: March to Celaenae</span>
           </a>
         
-        
-          <div></div>
-        
       </div>
-      
       
       
         <div class="chapter-selector">
@@ -978,9 +1047,20 @@ document.addEventListener('DOMContentLoaded', function() {
       color: #f0e0d0 !important;
     }
     
-    .dark-mode-active .nav-card:hover {
+    .dark-mode-active a.nav-card:hover {
       background: #332b25 !important;
       border-color: #ff9944 !important;
+    }
+    
+    .dark-mode-active .nav-card.nav-disabled {
+      background: rgba(42, 37, 32, 0.4) !important;
+      border-color: rgba(255, 169, 77, 0.1) !important;
+      opacity: 0.5;
+    }
+    
+    .dark-mode-active .nav-muted {
+      color: rgba(240, 224, 208, 0.4) !important;
+      font-style: italic;
     }
     
     .dark-mode-active .nav-label {
