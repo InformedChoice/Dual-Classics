@@ -55,4 +55,27 @@
       </button>
     </div>
   </div>
+
+  <div class="control-group">
+    <label class="control-label">Timer</label>
+    <div class="control-buttons">
+      <button id="timer-toggle" class="control-btn" aria-pressed="false">
+        <span class="btn-text">⏱ Timer</span>
+      </button>
+    </div>
+  </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('timer-toggle');
+    const panel = document.getElementById('reader-timer-panel');
+    if (toggle && panel) {
+      toggle.addEventListener('click', function () {
+        panel.classList.toggle('hidden');
+        const pressed = toggle.getAttribute('aria-pressed') === 'true';
+        toggle.setAttribute('aria-pressed', pressed ? 'false' : 'true');
+      });
+    }
+  });
+</script>

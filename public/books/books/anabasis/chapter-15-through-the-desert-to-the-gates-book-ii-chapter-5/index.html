@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapter 15: Through the Desert to the Gates (Book II, Chapter 5) · Dual Classics</title>
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/css/main.min.ad890043bc92bea7355e3de123c2a787d87e8286cb7269b883c5b04d48884d0e.css" integrity="sha256-rYkAQ7ySvqc1Xj3hI8Knh9h&#43;gobLcmm4g8WwTUiITQ4=" />
+    <link rel="stylesheet" href="/css/main.min.dc4148493f6ae3bd078fd0c974f45bd6439399567537b3aca6533d7432a9d08f.css" integrity="sha256-3EFIST9q470Hj9DJdPRb1kOTmVZ1N7OsplM9dDKp0I8=" />
     
     <link rel="stylesheet" href="/css/pronunciation.css" />
   </head>
@@ -128,8 +128,206 @@
       </button>
     </div>
   </div>
-</div>
+
+  <div class="control-group">
+    <label class="control-label">Timer</label>
+    <div class="control-buttons">
+      <button id="timer-toggle" class="control-btn" aria-pressed="false">
+        <span class="btn-text">⏱ Timer</span>
+      </button>
     </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('timer-toggle');
+    const panel = document.getElementById('reader-timer-panel');
+    if (toggle && panel) {
+      toggle.addEventListener('click', function () {
+        panel.classList.toggle('hidden');
+        const pressed = toggle.getAttribute('aria-pressed') === 'true';
+        toggle.setAttribute('aria-pressed', pressed ? 'false' : 'true');
+      });
+    }
+  });
+</script>
+
+    </div>
+    <div
+  id="reader-timer-panel"
+  class="fixed bottom-0 left-0 right-0 z-40 max-w-md mx-auto mb-4 p-3 rounded-lg shadow-lg bg-white dark:bg-base-200 border border-base-300 hidden"
+  style="font-family: inherit; width: calc(100% - 1rem); position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; margin: 0 auto;"
+>
+  <div class="flex flex-wrap gap-2 items-center mb-2">
+    <label class="flex items-center gap-2">
+      Mode:
+      <select id="rt-mode" class="select select-bordered select-xs">
+        <option value="stopwatch">Stopwatch</option>
+        <option value="countdown">Countdown</option>
+      </select>
+    </label>
+    <label class="flex items-center gap-2">
+      Minutes:
+      <input id="rt-mins" type="number" min="1" value="20" class="input input-bordered input-xs w-16" />
+    </label>
+  </div>
+  <div class="text-3xl font-mono mb-2">
+    <span id="rt-display">00:00:00</span>
+  </div>
+  <div class="flex gap-2 flex-wrap mb-2">
+    <button id="rt-start" class="btn btn-sm btn-primary">Start</button>
+    <button id="rt-pause" class="btn btn-sm btn-secondary">Pause</button>
+    <button id="rt-reset" class="btn btn-sm">Reset</button>
+    <button id="rt-ding" class="btn btn-sm" title="Test sound">🔔</button>
+  </div>
+  <div class="text-xs text-gray-600 dark:text-gray-400">
+    Today’s total: <span id="rt-total-today">00:00:00</span>
+  </div>
+</div>
+
+<script>
+(() => {
+  const el = (id) => document.getElementById(id);
+  const panel = el('reader-timer-panel');
+  const display = el('rt-display');
+  const totalTodayEl = el('rt-total-today');
+  const modeSel = el('rt-mode');
+  const minsInp = el('rt-mins');
+  const btnStart = el('rt-start');
+  const btnPause = el('rt-pause');
+  const btnReset = el('rt-reset');
+  const btnDing  = el('rt-ding');
+
+  const key = `readerTimer:${location.pathname}`;
+  const todayKey = () => new Date().toISOString().slice(0,10);
+  const state = {
+    running: false,
+    mode: 'stopwatch',
+    targetMs: 20*60*1000,
+    startTs: null,
+    elapsedMs: 0,
+    totalByDay: {},
+    interval: null
+  };
+
+  const fmt = (ms) => {
+    ms = Math.max(ms,0);
+    const s = Math.floor(ms/1000);
+    const h = Math.floor(s/3600).toString().padStart(2,'0');
+    const m = Math.floor((s%3600)/60).toString().padStart(2,'0');
+    const sec = (s%60).toString().padStart(2,'0');
+    return `${h}:${m}:${sec}`;
+  };
+  const load = () => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(key) || '{}');
+      if (saved.mode) state.mode = saved.mode;
+      if (typeof saved.targetMs === 'number') state.targetMs = saved.targetMs;
+      if (typeof saved.elapsedMs === 'number') state.elapsedMs = saved.elapsedMs;
+      if (saved.totalByDay && typeof saved.totalByDay === 'object') state.totalByDay = saved.totalByDay;
+    } catch {}
+    modeSel.value = state.mode;
+    minsInp.value = Math.max(1, Math.round(state.targetMs/60000)) || 20;
+    render();
+  };
+  const save = () => {
+    localStorage.setItem(key, JSON.stringify({
+      mode: state.mode,
+      targetMs: state.targetMs,
+      elapsedMs: state.elapsedMs,
+      totalByDay: state.totalByDay
+    }));
+  };
+  const updateTotals = (deltaMs) => {
+    const day = todayKey();
+    state.totalByDay[day] = (state.totalByDay[day] || 0) + deltaMs;
+  };
+  const tick = () => {
+    if (!state.running || state.startTs == null) return;
+    const now = performance.now();
+    const delta = now - state.startTs;
+    state.startTs = now;
+    if (state.mode === 'stopwatch') {
+      state.elapsedMs += delta;
+      updateTotals(delta);
+    } else {
+      state.elapsedMs += delta;
+      updateTotals(delta);
+      if (state.elapsedMs >= state.targetMs) {
+        state.running = false;
+        clearInterval(state.interval);
+        state.interval = null;
+        state.elapsedMs = state.targetMs;
+        ding();
+        alert('Time is up! Great job reading 👏');
+      }
+    }
+    render(); save();
+  };
+  const render = () => {
+    const remain = state.mode === 'stopwatch' ? state.elapsedMs : Math.max(state.targetMs - state.elapsedMs, 0);
+    display.textContent = fmt(remain);
+    totalTodayEl.textContent = fmt(state.totalByDay[todayKey()] || 0);
+  };
+  const start = () => {
+    if (state.running) return;
+    state.running = true;
+    state.startTs = performance.now();
+    state.interval = setInterval(tick, 500);
+    save();
+  };
+  const pause = () => {
+    if (!state.running) return;
+    state.running = false;
+    if (state.interval) clearInterval(state.interval);
+    state.interval = null;
+    tick(); save();
+  };
+  const reset = () => {
+    pause();
+    state.elapsedMs = 0;
+    render(); save();
+  };
+  const ding = () => {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const o = ctx.createOscillator();
+      const g = ctx.createGain();
+      o.type = 'sine'; o.frequency.value = 880;
+      o.connect(g); g.connect(ctx.destination);
+      g.gain.setValueAtTime(0.0001, ctx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.2, ctx.currentTime + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.25);
+      o.start(); o.stop(ctx.currentTime + 0.3);
+    } catch {}
+  };
+
+  modeSel.addEventListener('change', () => {
+    const wasRunning = state.running;
+    pause();
+    state.mode = modeSel.value;
+    render(); save();
+    if (wasRunning) start();
+  });
+  minsInp.addEventListener('change', () => {
+    const mins = Math.max(1, Number(minsInp.value) || 20);
+    minsInp.value = mins;
+    state.targetMs = mins * 60 * 1000;
+    render(); save();
+  });
+  btnStart.addEventListener('click', start);
+  btnPause.addEventListener('click', pause);
+  btnReset.addEventListener('click', reset);
+  btnDing.addEventListener('click', ding);
+
+  document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
+  window.addEventListener('beforeunload', save);
+  load();
+})();
+</script>
+
+
 
     <header class="chapter-header">
       <h1 class="chapter-title">Chapter 15: Through the Desert to the Gates (Book II, Chapter 5)</h1>

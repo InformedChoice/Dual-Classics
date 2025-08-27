@@ -688,3 +688,6 @@ button { min-height: 42px; }
     flex: 1;
   }
 }
+
+/* Utility: ensure .hidden works (for timer toggle) */
+.hidden { display: none !important; }

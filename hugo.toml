@@ -28,6 +28,9 @@ enableRobotsTXT = true
 
 disableKinds = ["taxonomy", "term"]
 
+# Disable taxonomies entirely to avoid taxonomy layout warnings
+[taxonomies]
+
 [menu]
   [[menu.main]]
     name = "Books"

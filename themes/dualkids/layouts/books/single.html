@@ -36,6 +36,7 @@
     <div class="reading-panel" id="reading-panel" hidden>
       {{ partial "reading-controls.html" . }}
     </div>
+    {{ .RenderString "{{< reader-timer >}}" }}
 
     <header class="chapter-header">
       <h1 class="chapter-title">{{ .Title }}</h1>
