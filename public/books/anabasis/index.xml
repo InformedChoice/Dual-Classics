@@ -350,5 +350,47 @@
       <guid>http://localhost:1313/books/books/anabasis/chapter-49-a-broken-promise/</guid>
       <description>Anaxibius promises pay if they leave the sea—then refuses.</description>
     </item>
+    <item>
+      <title>Chapter 50: Hold Fast With Honor</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-50-hold-fast-with-honor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-50-hold-fast-with-honor/</guid>
+      <description>After Anaxibius’s broken promise, the army resists mutiny and holds together.</description>
+    </item>
+    <item>
+      <title>Chapter 51: Cleander’s Promise</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-51-cleanders-promise/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-51-cleanders-promise/</guid>
+      <description>A new Spartan, Cleander, proves fair and gives hope.</description>
+    </item>
+    <item>
+      <title>Chapter 52: Leaving Byzantium</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-52-leaving-byzantium/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-52-leaving-byzantium/</guid>
+      <description>They prepare to leave Byzantium, united and closer to home.</description>
+    </item>
+    <item>
+      <title>Chapter 53: Into Asia with Thibron</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-53-into-asia-with-thibron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-53-into-asia-with-thibron/</guid>
+      <description>Leaving Byzantium, they join Thibron’s campaign with promise of pay.</description>
+    </item>
+    <item>
+      <title>Chapter 54: Discipline Before Thibron</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-54-discipline-before-thibron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-54-discipline-before-thibron/</guid>
+      <description>Xenophon restores discipline as they prepare to march with Thibron.</description>
+    </item>
+    <item>
+      <title>Chapter 55: Allies of Sparta</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-55-allies-of-sparta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-55-allies-of-sparta/</guid>
+      <description>Marching for Thibron against the Persian satraps, their name inspires fear.</description>
+    </item>
   </channel>
 </rss>
