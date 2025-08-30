@@ -6,12 +6,8 @@ summary: "Mithridates attacks; the Greeks counter and reach ruined Larissa."
 ---
 
 {{< bp >}}
-English (Book IV, Chapter 4)
-
 The next day, {{< name "Mithridates" "MITH-ri-DAY-teez" >}} came back with 1,000 horsemen and 4,000 archers and slingers. He wanted to capture the Greeks and hand them over to {{< name "Tissaphernes" "TIS-ah-FER-neez" >}}.
 ---
-Español (Libro IV, Capítulo 4)
-
 Al día siguiente, {{< name "Mitrídates" "MITH-ri-DAH-tes" >}} regresó con 1,000 jinetes y 4,000 arqueros y honderos. Quería atrapar a los griegos y entregarlos a {{< name "Tisasfernes" "TIS-ah-FER-nes" >}}.
 {{< /bp >}}
 
@@ -31,4 +27,3 @@ Footnotes:
 
 Parasang = about 3.5 miles (5.6 km).
 Larissa = ancient Mede city, now ruins.
-

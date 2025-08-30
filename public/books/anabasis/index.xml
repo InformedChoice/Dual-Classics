@@ -266,5 +266,47 @@
       <guid>http://localhost:1313/books/books/anabasis/chapter-37-split-and-rescue/</guid>
       <description>The army splits; Xenophon rushes to help trapped Arcadians.</description>
     </item>
+    <item>
+      <title>Chapter 38: Strange Honey</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-38-strange-honey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-38-strange-honey/</guid>
+      <description>The reunited Greeks find villages—and dizzying, strange honey.</description>
+    </item>
+    <item>
+      <title>Chapter 39: Cotyora and Gifts</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-39-cotyora-and-gifts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-39-cotyora-and-gifts/</guid>
+      <description>At Cotyora, Paphlagonian envoys visit; feasts, dances, and peace.</description>
+    </item>
+    <item>
+      <title>Chapter 40: Sinope and a Choice</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-40-sinope-and-a-choice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-40-sinope-and-a-choice/</guid>
+      <description>They reach Sinope; Anaxibius’s promise; the army debates one leader.</description>
+    </item>
+    <item>
+      <title>Chapter 41: A Leader Chosen</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-41-a-leader-chosen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-41-a-leader-chosen/</guid>
+      <description>Xenophon declines sole command; Cheirisophus is chosen.</description>
+    </item>
+    <item>
+      <title>Chapter 42: Heraclea and Restraint</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-42-heraclea-and-restraint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-42-heraclea-and-restraint/</guid>
+      <description>At Heraclea, the army leaves hungry but avoids harming fellow Greeks.</description>
+    </item>
+    <item>
+      <title>Chapter 43: Calpe’s Temptation</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-43-calpes-temptation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-43-calpes-temptation/</guid>
+      <description>Calpe’s fine harbor tempts them to settle; they vote to march on.</description>
+    </item>
   </channel>
 </rss>

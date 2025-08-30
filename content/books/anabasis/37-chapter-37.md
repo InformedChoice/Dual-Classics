@@ -6,7 +6,6 @@ summary: "The army splits; Xenophon rushes to help trapped Arcadians."
 ---
 
 {{< bp >}}
-English — Book V, Chapter 3
 {{< name "Cheirisophus" "KAI-ree-so-fus" >}} never returned with ships, and food was harder to find. So the army divided:
 The {{< name "Arcadians" "ar-KAY-dee-anz" >}} and {{< name "Achaeans" "ah-KEE-anz" >}}, about 4,500 men, went off alone.
 Cheirisophus kept 2,000 men.
@@ -18,7 +17,6 @@ Xenophon heard of this and urged his men: “If they die, our turn comes next. B
 
 He marched quickly, burning everything along the way to look like a huge army. When his men reached the hill, they found the Arcadians had already broken free. Overjoyed, the two groups embraced like long-lost brothers.
 ---
-Español — Libro V, Capítulo 3
 {{< name "Queirisófo" "KYE-ri-SOF-us" >}} nunca regresó con barcos, y la comida era cada vez más difícil de encontrar. Así que el ejército se dividió:
 Los {{< name "Arcadios" "ar-KAH-dios" >}} y {{< name "Aqueos" "ah-KEH-os" >}}, unos 4,500 hombres, se fueron solos.
 Queirisófo conservó 2,000 hombres.

@@ -6,12 +6,8 @@ summary: "Into Armenia; distances, rivers, and a cautious treaty with Tiribazus.
 ---
 
 {{< bp >}}
-English (Book IV, Chapter 3)
-
 After crossing the river, the Greeks marched into Armenia. The land was wide and smooth, with gentle hills. They walked about five parasangs (about 18 miles) before reaching a big village. This village had a grand house for the {{< name "satrap" "SAY-trap" >}} (= governor), and many of the homes had towers. The Greeks found plenty of food there.
 ---
-Español (Libro IV, Capítulo 3)
-
 Después de cruzar el río, los griegos entraron en Armenia. La tierra era amplia y suave, con colinas bajas. Caminaron unas cinco parasangas (aprox. 18 millas) antes de llegar a una gran aldea. Esta aldea tenía una casa grande para el {{< name "sátrapa" "SÁ-trah-pa" >}} (= gobernador), y muchas casas tenían torres. Los griegos encontraron mucha comida allí.
 {{< /bp >}}
 
@@ -36,4 +32,3 @@ Los generales griegos se adelantaron y preguntaron qué quería. Tiribazo dijo: 
 Footnote:
 
 Parasang = an old Persian measure of distance, about 3.5 miles (5.6 km).
-

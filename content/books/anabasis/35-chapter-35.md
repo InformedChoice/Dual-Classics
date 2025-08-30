@@ -6,10 +6,8 @@ summary: "They reach the sea at Trapezus, celebrate, and plan for ships."
 ---
 
 {{< bp >}}
-English — Book V, Chapter 1
 After many months of marching, the Greek soldiers finally reached the sea at a city called {{< name "Trapezus" "TRAP-eh-zoos" >}}. They were so happy to see the water that they cried out loud: “The sea! The sea!” They built a big pile of stones on the hilltop and left their shields, spears, and animal skins on it as a monument. Then they sacrificed animals to thank the gods for saving them.
 ---
-Español — Libro V, Capítulo 1
 Después de muchos meses de marcha, los soldados griegos por fin llegaron al mar en una ciudad llamada {{< name "Trapezunte" "TRAP-eh-zun-te" >}}. Estaban tan felices de ver el agua que gritaron en voz alta: “¡El mar! ¡El mar!” Construyeron un gran montón de piedras en la cima de una colina y dejaron allí sus escudos, lanzas y pieles de animales como monumento. Luego sacrificaron animales para agradecer a los dioses por salvarlos.
 {{< /bp >}}
 

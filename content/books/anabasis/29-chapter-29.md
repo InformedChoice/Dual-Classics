@@ -6,12 +6,8 @@ summary: "Pyramids, towering walls at Mespila, and skirmishing with Tissaphernes
 ---
 
 {{< bp >}}
-English (Book IV, Chapter 5)
-
 Near Larissa stood a huge stone pyramid, 100 feet wide and 200 feet tall, where villagers had taken refuge.
 ---
-Español (Libro IV, Capítulo 5)
-
 Cerca de Larisa había una enorme pirámide de piedra, de 30 metros de ancho y 60 de alto, donde se habían refugiado aldeanos.
 {{< /bp >}}
 
@@ -38,4 +34,3 @@ Footnotes:
 Parasang = about 3.5 miles (5.6 km).
 Larissa = ancient Mede city, now ruins.
 Mespila = another ruined Mede fortress, linked with myths of Medea.
-

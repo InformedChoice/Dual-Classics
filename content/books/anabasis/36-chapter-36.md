@@ -6,10 +6,8 @@ summary: "Short on food, they raid the Drilae; unity keeps them alive."
 ---
 
 {{< bp >}}
-English — Book V, Chapter 2
 Soon the Greeks found themselves short on food. {{< name "Xenophon" "ZEN-oh-fon" >}} led half the army into the mountains to raid the {{< name "Drilae" "DRI-lie" >}}, fierce tribesmen who lived in strong forts. But the enemy burned their own villages so the Greeks would find little to take. Eventually the Greeks stormed one fort, capturing some animals and grain.
 ---
-Español — Libro V, Capítulo 2
 Pronto los griegos se quedaron sin comida. {{< name "Jenofonte" "JEH-no-fon-te" >}} condujo a la mitad del ejército a las montañas para atacar a los {{< name "Drileos" "DRI-le-os" >}}, guerreros fieros que vivían en fortalezas fuertes. Pero el enemigo quemó sus propias aldeas para que los griegos no encontraran nada. Al final los griegos tomaron por asalto una fortaleza, capturando algunos animales y grano.
 {{< /bp >}}
 
