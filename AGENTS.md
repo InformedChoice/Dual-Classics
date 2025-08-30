@@ -77,6 +77,10 @@ GitHub Pages
 ## Conventions
 
 - Use simple sentences and short paragraphs.
-- Include pronunciation hints on first mention: `Cyrus (SY-rus)`.
+- Keep the story wording unchanged. If names include parenthetical pronunciation hints in the draft (e.g., `Cyrus (SY-rus)`), convert them to the `name` shortcode so they toggle with Pronunciation On/Off. Keep punctuation outside the shortcode.
 - If a book is partial, set `status: in-progress` and `plannedChapters` to show progress.
 - Use numeric prefixes on chapter filenames for stable sort, and set `weight` to match the chapter number.
+
+Maintenance notes
+- When you add or remove chapters, update the book’s `_index.md` `plannedChapters` so the progress display stays accurate.
+- Avoid duplicate narrative coverage across chapters. If new content expands an event already covered, trim or refocus the earlier chapter so each scene appears once in order.
