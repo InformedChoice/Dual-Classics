@@ -434,5 +434,40 @@
       <guid>http://localhost:1313/books/books/anabasis/chapter-61-nearing-pergamon/</guid>
       <description>They approach Pergamon; the long march nears its end.</description>
     </item>
+    <item>
+      <title>Chapter 62: Gifts at Pergamon</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-62-gifts-at-pergamon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-62-gifts-at-pergamon/</guid>
+      <description>In Pergamon, Gongylus aids them; Xenophon keeps the peace.</description>
+    </item>
+    <item>
+      <title>Chapter 63: Called Once More</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-63-called-once-more/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-63-called-once-more/</guid>
+      <description>Spartans call the Ten Thousand to fight Persians again; they agree.</description>
+    </item>
+    <item>
+      <title>Chapter 64: Torn Between Home and Honor</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-64-torn-between-home-and-honor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-64-torn-between-home-and-honor/</guid>
+      <description>Xenophon longs for home, yet feels pride and duty to the army.</description>
+    </item>
+    <item>
+      <title>Chapter 65: The Ten Thousand’s Name</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-65-the-ten-thousands-name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-65-the-ten-thousands-name/</guid>
+      <description>Smaller now, they still carry the Ten Thousand’s proud name.</description>
+    </item>
+    <item>
+      <title>Chapter 66: March’s End, Story Begins</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-66-marchs-end-story-begins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-66-marchs-end-story-begins/</guid>
+      <description>The march ends; Xenophon preserves their story for all time.</description>
+    </item>
   </channel>
 </rss>
