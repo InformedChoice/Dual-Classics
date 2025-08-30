@@ -392,5 +392,26 @@
       <guid>http://localhost:1313/books/books/anabasis/chapter-55-allies-of-sparta/</guid>
       <description>Marching for Thibron against the Persian satraps, their name inspires fear.</description>
     </item>
+    <item>
+      <title>Chapter 56: Hesitant Command, Steady Courage</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-56-hesitant-command-steady-courage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-56-hesitant-command-steady-courage/</guid>
+      <description>Thibron hesitates; the Greeks fight bravely and the Persians avoid battle.</description>
+    </item>
+    <item>
+      <title>Chapter 57: Dercylidas Takes Command</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-57-dercylidas-takes-command/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-57-dercylidas-takes-command/</guid>
+      <description>Sparta replaces Thibron with Dercylidas; energy and respect return.</description>
+    </item>
+    <item>
+      <title>Chapter 58: Xenophon Stays On</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-58-xenophon-stays-on/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-58-xenophon-stays-on/</guid>
+      <description>Xenophon considers going home; the soldiers beg him to stay, and he agrees.</description>
+    </item>
   </channel>
 </rss>
