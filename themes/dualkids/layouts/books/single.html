@@ -87,6 +87,11 @@
             {{ range $chapters }}
               <option value="{{ .RelPermalink }}" {{ if eq .RelPermalink $.RelPermalink }}selected{{ end }}>{{ .Title }}</option>
             {{ end }}
+            {{ $glossaryPages := where $.Parent.Pages "Params.glossary" true }}
+            {{ if gt (len $glossaryPages) 0 }}
+              {{ $glossary := index $glossaryPages 0 }}
+              <option value="{{ $glossary.RelPermalink }}">— Glossary —</option>
+            {{ end }}
           </select>
         </div>
       {{ end }}

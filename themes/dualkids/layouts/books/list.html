@@ -143,6 +143,18 @@
                   Start Reading
                 </a>
               {{ end }}
+              {{/* Glossary button if a glossary page exists */}}
+              {{ $glossaryPages := where .Pages "Params.glossary" true }}
+              {{ if gt (len $glossaryPages) 0 }}
+                {{ $glossary := index $glossaryPages 0 }}
+                <a href="{{ $glossary.RelPermalink }}" class="btn-start-reading" style="background:#666">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                  View Glossary
+                </a>
+              {{ end }}
             </div>
           </div>
         </div>
