@@ -1,6 +1,5 @@
 +++
 title = "Common Sense — Bilingual Family Edition"
-layout = "book"
 author = "Thomas Paine"
 original_author = "Thomas Paine"
 year = "1776"

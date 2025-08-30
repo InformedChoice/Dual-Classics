@@ -45,11 +45,11 @@
             {{ end }}
           </div>
           
-          <div class="book-info-section">
-            <h1 class="book-main-title">{{ .Title }}</h1>
-            
-            <div class="book-meta-info">
-              {{ with .Params.author }}
+            <div class="book-info-section">
+              <h1 class="book-main-title">{{ .Title }}</h1>
+              
+              <div class="book-meta-info">
+                {{ with .Params.author }}
                 <span class="meta-item">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -71,8 +71,12 @@
                 </span>
               {{ end }}
               
-              {{ if .Params.status }}
-                {{ if eq .Params.status "in-progress" }}
+              {{/* Status badge: prefer explicit param; otherwise infer from chapter count */}}
+              {{ $explicit := .Params.status }}
+              {{ $planned := .Params.plannedChapters }}
+              {{ $count := len .Pages }}
+              {{ if $explicit }}
+                {{ if eq $explicit "in-progress" }}
                   <span class="status-badge in-progress">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <circle cx="12" cy="12" r="10"></circle>
@@ -80,7 +84,7 @@
                     </svg>
                     In Progress
                   </span>
-                {{ else if eq .Params.status "complete" }}
+                {{ else if eq $explicit "complete" }}
                   <span class="status-badge complete">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
@@ -89,8 +93,26 @@
                     Complete
                   </span>
                 {{ end }}
+              {{ else if $planned }}
+                {{ if ge $count $planned }}
+                  <span class="status-badge complete">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Complete
+                  </span>
+                {{ else }}
+                  <span class="status-badge in-progress">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    In Progress
+                  </span>
+                {{ end }}
               {{ end }}
-            </div>
+              </div>
             
             {{ with .Params.description }}
               <p class="book-description">{{ . }}</p>
