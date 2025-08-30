@@ -1,5 +1,5 @@
 +++
-title = "Chapter 5 – What America Must Do Now / Capítulo 5 – Lo que América debe hacer ahora"
+title = "Chapter 5: What America Must Do Now"
 weight = 5
 chapter = 5
 +++

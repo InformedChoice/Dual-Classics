@@ -1,5 +1,5 @@
 +++
-title = "Chapter 2 – Of Monarchy and Hereditary Succession / Capítulo 2 – De la monarquía y la sucesión hereditaria"
+title = "Chapter 2: Of Monarchy and Hereditary Succession"
 weight = 2
 chapter = 2
 +++
@@ -13,4 +13,3 @@ chapter = 2
 {{< bi en="To bind a whole country to the accidents of birth is madness. If we would not let a school choose its leaders by bloodline, how can we allow a nation to be ruled this way? A free people should choose their own leaders, and remove them when they betray trust." es="Atar a un país entero a los accidentes del nacimiento es una locura. Si no dejaríamos que una escuela eligiera a sus líderes por linaje, ¿cómo podemos permitir que una nación sea gobernada de esta manera? Un pueblo libre debe elegir a sus propios líderes y quitarlos cuando traicionen la confianza." >}}
 
 {{< bi en="Monarchy has always been the enemy of liberty. It produces wars, burdens the people with taxes, and sets one family above all others. The plain truth is this: we do not need kings. Government should belong to the people, not to one bloodline forever." es="La monarquía siempre ha sido enemiga de la libertad. Produce guerras, carga al pueblo con impuestos y pone a una familia por encima de todas las demás. La verdad es simple: no necesitamos reyes. El gobierno debe pertenecer al pueblo, no a una sola familia para siempre." >}}
-

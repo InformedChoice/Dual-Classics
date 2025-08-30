@@ -1,5 +1,5 @@
 +++
-title = "Chapter 4 – Of the Present Ability of America, with Some Miscellaneous Reflections / Capítulo 4 – De la capacidad actual de América, con algunas reflexiones adicionales"
+title = "Chapter 4: Of the Present Ability of America, with Some Miscellaneous Reflections"
 weight = 4
 chapter = 4
 +++

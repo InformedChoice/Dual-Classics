@@ -1,5 +1,5 @@
 +++
-title = "Chapter 3 – Thoughts on the Present State of American Affairs / Capítulo 3 – Pensamientos sobre el estado actual de los asuntos en América"
+title = "Chapter 3: Thoughts on the Present State of American Affairs"
 weight = 3
 chapter = 3
 +++
