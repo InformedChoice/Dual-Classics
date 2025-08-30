@@ -329,5 +329,26 @@
       <guid>http://localhost:1313/books/books/anabasis/chapter-46-farewell-to-cheirisophus/</guid>
       <description>Cheirisophus falls ill and dies; the march goes on.</description>
     </item>
+    <item>
+      <title>Chapter 47: Discipline Restored</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-47-discipline-restored/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-47-discipline-restored/</guid>
+      <description>After Cheirisophus dies, disorder rises until Xenophon restores order.</description>
+    </item>
+    <item>
+      <title>Chapter 48: Byzantium’s Shut Gates</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-48-byzantiums-shut-gates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-48-byzantiums-shut-gates/</guid>
+      <description>Hungry at Byzantium, they seek peace and finally receive food.</description>
+    </item>
+    <item>
+      <title>Chapter 49: A Broken Promise</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-49-a-broken-promise/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-49-a-broken-promise/</guid>
+      <description>Anaxibius promises pay if they leave the sea—then refuses.</description>
+    </item>
   </channel>
 </rss>
