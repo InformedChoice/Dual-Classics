@@ -413,5 +413,26 @@
       <guid>http://localhost:1313/books/books/anabasis/chapter-58-xenophon-stays-on/</guid>
       <description>Xenophon considers going home; the soldiers beg him to stay, and he agrees.</description>
     </item>
+    <item>
+      <title>Chapter 59: Fame and Loyalty</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-59-fame-and-loyalty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-59-fame-and-loyalty/</guid>
+      <description>With Dercylidas, their fame spreads; Xenophon stays out of loyalty.</description>
+    </item>
+    <item>
+      <title>Chapter 60: Cities and Unity</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-60-cities-and-unity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-60-cities-and-unity/</guid>
+      <description>Welcomed or feared, they keep together, a family far from Greece.</description>
+    </item>
+    <item>
+      <title>Chapter 61: Nearing Pergamon</title>
+      <link>http://localhost:1313/books/books/anabasis/chapter-61-nearing-pergamon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/books/anabasis/chapter-61-nearing-pergamon/</guid>
+      <description>They approach Pergamon; the long march nears its end.</description>
+    </item>
   </channel>
 </rss>
