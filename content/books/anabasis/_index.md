@@ -1,7 +1,7 @@
 ---
 title: "Anabasis (The March of the Ten Thousand) — Modern Simple"
 author: "Xenophon"
-translator: "Your Family"
+translator: "Our Family"
 status: "in-progress"
 plannedChapters: 43
 cover: "https://imagedelivery.net/uoQWLs2DQGCKz-4i8TTorQ/636f5d98-5eb3-44ab-ead0-8bd5f5ae8e00/public"
