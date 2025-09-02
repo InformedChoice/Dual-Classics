@@ -1,0 +1,126 @@
+{{/*
+  SEO partial: sets meta tags, OpenGraph/Twitter, canonical, and JSON-LD.
+  Usage: {{ partial "seo.html" . }}
+*/}}
+
+{{ $site := site }}
+{{ $p := . }}
+
+{{/* Core values */}}
+{{ $title := cond (ne $p.Title "") (printf "%s · %s" $p.Title $site.Title) $site.Title }}
+{{ $siteDesc := or $site.Params.seo.siteDescription $site.Params.brandTagline "Kid-friendly dual-language classics: simple English + Español." }}
+{{ $desc := or $p.Params.description ($p.Summary | plainify) $siteDesc }}
+{{ $desc = ($desc | plainify | truncate 160) }}
+{{ $url := $p.Permalink }}
+{{ $img := or $p.Params.cover $site.Params.seo.defaultOGImage }}
+{{ $theme := or $site.Params.primaryColor "#ff9944" }}
+{{ $twitter := $site.Params.seo.twitter }}
+
+<meta name="description" content="{{ $desc }}" />
+<meta name="theme-color" content="{{ $theme }}" />
+<link rel="canonical" href="{{ $url }}" />
+
+{{/* OpenGraph */}}
+{{ $ogType := "website" }}
+{{ if and (eq $p.Section "books") ($p.Params.author) }}
+  {{ $ogType = "book" }}
+{{ else if and ($p.IsPage) (eq $p.Section "books") }}
+  {{ $ogType = "article" }}
+{{ else if $p.IsHome }}
+  {{ $ogType = "website" }}
+{{ end }}
+
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $desc }}" />
+<meta property="og:type" content="{{ $ogType }}" />
+<meta property="og:url" content="{{ $url }}" />
+{{ with $img }}<meta property="og:image" content="{{ . }}" />{{ end }}
+<meta property="og:site_name" content="{{ $site.Title }}" />
+
+{{/* Twitter */}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $desc }}" />
+{{ with $img }}<meta name="twitter:image" content="{{ . }}" />{{ end }}
+{{ with $twitter }}<meta name="twitter:site" content="@{{ . }}" /><meta name="twitter:creator" content="@{{ . }}" />{{ end }}
+
+{{/* Robots: allow override with noindex in front matter */}}
+{{ if $p.Params.noindex }}
+  <meta name="robots" content="noindex, nofollow" />
+{{ else }}
+  <meta name="robots" content="index, follow" />
+{{ end }}
+
+{{/* JSON-LD */}}
+{{ $org := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" $site.Title
+  "url" $site.BaseURL
+}}
+
+{{ if $p.IsHome }}
+  {{ $web := dict
+      "@context" "https://schema.org"
+      "@type" "WebSite"
+      "name" $site.Title
+      "url" $site.BaseURL
+      "description" $siteDesc
+      "inLanguage" (slice "en" "es")
+  }}
+  <script type="application/ld+json">{{ $web | jsonify }}</script>
+  <script type="application/ld+json">{{ $org | jsonify }}</script>
+{{ else if and (eq $p.Section "books") ($p.Params.author) }}
+  {{/* Book page (per-book _index.md) */}}
+  {{ $book := dict
+      "@context" "https://schema.org"
+      "@type" "Book"
+      "name" $p.Title
+      "url" $url
+      "image" $img
+      "author" (dict "@type" "Person" "name" $p.Params.author)
+      "translator" (cond (not (isset $p.Params "translator")) nil (dict "@type" "Person" "name" $p.Params.translator))
+      "description" $desc
+      "isFamilyFriendly" true
+      "inLanguage" (slice "en" "es")
+      "genre" (slice "Classics" "Children" "Bilingual")
+      "publisher" (dict "@type" "Organization" "name" $site.Title)
+  }}
+  <script type="application/ld+json">{{ $book | jsonify }}</script>
+  <script type="application/ld+json">{{ $org | jsonify }}</script>
+{{ else if and ($p.IsPage) (eq $p.Section "books") }}
+  {{/* Chapter page */}}
+  {{ $parent := $p.CurrentSection }}
+  {{ $article := dict
+      "@context" "https://schema.org"
+      "@type" "Article"
+      "headline" $p.Title
+      "url" $url
+      "image" $img
+      "description" $desc
+      "isFamilyFriendly" true
+      "inLanguage" (slice "en" "es")
+      "author" (cond (not (isset $parent.Params "author")) nil (dict "@type" "Person" "name" $parent.Params.author))
+      "translator" (cond (not (isset $parent.Params "translator")) nil (dict "@type" "Person" "name" $parent.Params.translator))
+      "partOfSeries" (dict "@type" "Book" "name" $parent.Title "url" $parent.Permalink)
+      "publisher" (dict "@type" "Organization" "name" $site.Title)
+      "dateModified" ($p.Lastmod | time.Format "2006-01-02")
+  }}
+  <script type="application/ld+json">{{ $article | jsonify }}</script>
+  <script type="application/ld+json">{{ $org | jsonify }}</script>
+{{ else }}
+  {{/* Generic page (About, books index, etc.) */}}
+  {{ $page := dict
+      "@context" "https://schema.org"
+      "@type" "WebPage"
+      "name" $p.Title
+      "url" $url
+      "description" $desc
+      "isFamilyFriendly" true
+      "inLanguage" (slice "en" "es")
+      "publisher" (dict "@type" "Organization" "name" $site.Title)
+  }}
+  <script type="application/ld+json">{{ $page | jsonify }}</script>
+  <script type="application/ld+json">{{ $org | jsonify }}</script>
+{{ end }}
+

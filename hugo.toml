@@ -16,6 +16,13 @@ enableRobotsTXT = true
   footerNote = "Public domain classics, retold for kids."
   copyrightStartYear = 2025
 
+  [params.seo]
+    siteDescription = "Kid-friendly bilingual classics (EN + ES) — simple, side-by-side texts for families and classrooms."
+    # Replace with a wide 1200x630 image when available
+    defaultOGImage = "https://imagedelivery.net/uoQWLs2DQGCKz-4i8TTorQ/cec67720-b2ed-43fc-4099-c0987a94fb00/public"
+    # Optional: your Twitter handle without @ (uncomment and set)
+    # twitter = "dualclassics"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
