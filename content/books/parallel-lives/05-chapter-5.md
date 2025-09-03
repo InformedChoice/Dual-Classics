@@ -67,7 +67,7 @@ Stories grew around {{< name "Numa" "NOO-muh" >}}. One tale said he trapped the 
 ## Family and Death
 
 {{< bp >}}
-{{< name "Numa" "NOO-muh" >}} married {{< name "Tatia" "TAY-shah" >}}, daughter of the {{< name "Sabine" "SAY-bine" >}} king {{< name "Tatius" "TAY-shus" >}}. Later, he was said to have loved the nymph {{< name "Egeria" "eh-JEER-ee-ah" >}}, who counseled him. He lived a long, quiet life, ruling justly for forty‑three years. He died over eighty years old. {{< name "Rome" "ROHM" >}} mourned him deeply, as if each person lost a dear relative. His body was placed in a stone tomb under the Janiculum hill. In another tomb beside it, he left his sacred books, written with his own hand.
+{{< name "Numa" "NOO-muh" >}} married {{< name "Tatia" "TAY-shah" >}}, daughter of the {{< name "Sabine" "SAY-bine" >}} king {{< name "Tatius" "TAY-shus" >}}. Later, he was said to have loved the nymph {{< name "Egeria" "eh-JEER-ee-ah" >}}, who counseled him. He lived a long, quiet life, ruling justly for forty‑three years. He died over eighty years old. {{< name "Rome" "ROHM" >}} mourned him deeply, as if each person lost a dear relative. His body was placed in a stone tomb under the {{< name "Janiculum" "juh-NIK-yuh-lum" >}} hill. In another tomb beside it, he left his sacred books, written with his own hand.
 ---
 [ES placeholder]
 {{< /bp >}}
@@ -99,4 +99,3 @@ Vestal Virgins – Maidens chosen to guard the sacred fire of Vesta, goddess of 
 ---
 [ES placeholder]
 {{< /bp >}}
-
