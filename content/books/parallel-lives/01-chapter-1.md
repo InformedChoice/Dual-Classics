@@ -31,31 +31,13 @@ _(Retold for Young Readers)_
 {{< /bp >}}
 
 {{< bp >}}
-{{< name "Aegeus" "EE-jee-us" >}} had no children, so he asked the oracle (OR‑ah‑cul)¹ at {{< name "Delphi" "DEL-fee" >}} for advice. The oracle spoke in riddles:
+{{< name "Aegeus" "EE-jee-us" >}} had no children, so he asked the oracle (OR‑ah‑cul)¹ at {{< name "Delphi" "DEL-fee" >}} for advice. The oracle spoke in riddles: “Do not loosen the mouth of the wineskin until you come again to {{< name "Athens" "ATH-ens" >}}.”
 ---
 [ES placeholder]
 {{< /bp >}}
 
 {{< bp >}}
-“Do not loosen the mouth of the wineskin until you come again to {{< name "Athens" "ATH-ens" >}}.”
----
-[ES placeholder]
-{{< /bp >}}
-
-{{< bp >}}
-King {{< name "Pittheus" "PIT-thee-us" >}} guessed what it meant and arranged for {{< name "Aegeus" "EE-jee-us" >}} to be with his daughter.
----
-[ES placeholder]
-{{< /bp >}}
-
-{{< bp >}}
-Before {{< name "Aegeus" "EE-jee-us" >}} left, he placed a sword and sandals under a huge rock. He told {{< name "Aethra" "EE-thrah" >}}:
----
-[ES placeholder]
-{{< /bp >}}
-
-{{< bp >}}
-“If our son grows strong enough to lift this stone, let him take these things and come to {{< name "Athens" "ATH-ens" >}}. Then I will know he is mine.”
+King {{< name "Pittheus" "PIT-thee-us" >}} guessed what it meant and arranged for {{< name "Aegeus" "EE-jee-us" >}} to be with his daughter. Before {{< name "Aegeus" "EE-jee-us" >}} left, he placed a sword and sandals under a huge rock and told {{< name "Aethra" "EE-thrah" >}}: “If our son grows strong enough to lift this stone, let him take these things and come to {{< name "Athens" "ATH-ens" >}}. Then I will know he is mine.”
 ---
 [ES placeholder]
 {{< /bp >}}
