@@ -1,5 +1,6 @@
 {{ define "main" }}
   <article class="page">
+    {{ partial "breadcrumbs.html" . }}
     <header class="page-header">
       <h1 class="page-title">{{ .Title }}</h1>
       {{ with .Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
@@ -9,4 +10,3 @@
     </div>
   </article>
 {{ end }}
-
