@@ -30,9 +30,9 @@ enableRobotsTXT = true
     addressRegion = "CA"
     postalCode = "91104"
     addressCountry = "US"
+    logo = "https://imagedelivery.net/uoQWLs2DQGCKz-4i8TTorQ/87359f19-0b95-4d50-3bf4-f35ff540e400/public"
+    founders = ["Christian Rodgers", "Lyndsy Rodgers"]
     # Optional extras:
-    # logo = "https://.../logo.png"
-    # founders = ["Christian Rodgers", "Lyndsy Rodgers"]
     # sameAs = ["https://dualclassics.com/"]
 
 [markup]
