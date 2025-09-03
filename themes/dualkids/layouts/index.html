@@ -6,6 +6,36 @@
       <a class="btn btn-primary" href="{{ "/books/" | relURL }}">Browse Books</a>
     </div>
   </section>
+
+  {{/* Featured book: Parallel Lives */}}
+  {{ with site.GetPage "books/parallel-lives" }}
+  <section class="featured-book" style="margin:2rem 0;">
+    <div class="featured-inner" style="display:flex;gap:1.5rem;align-items:center;background:#fff;border-radius:16px;padding:1rem 1.25rem;box-shadow:0 4px 24px rgba(0,0,0,.08);">
+      <div class="featured-cover" style="flex-shrink:0;">
+        {{ if .Params.cover }}
+          <img src="{{ .Params.cover }}" alt="Cover of {{ .Title }}" style="width:120px;height:160px;object-fit:cover;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.15);" loading="lazy" />
+        {{ else }}
+          <div style="width:120px;height:160px;border-radius:10px;background: {{ or .Params.coverColor "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" }};"></div>
+        {{ end }}
+      </div>
+      <div class="featured-info" style="flex:1;">
+        <div style="font-size:.8rem;font-weight:700;color:#ff9944;letter-spacing:.5px;text-transform:uppercase;margin-bottom:.25rem;">Featured</div>
+        <h2 style="margin:.1rem 0 .4rem;font-size:1.6rem;line-height:1.2;">{{ .Title }}</h2>
+        {{ with .Params.author }}<div style="color:#666;margin-bottom:.5rem;">by {{ . }}</div>{{ end }}
+        {{ with .Params.description }}
+          <p style="margin:.25rem 0 1rem;color:#444;max-width:60ch;">{{ . }}</p>
+        {{ end }}
+        {{ $first := cond (gt (len .Pages) 0) (index .Pages.ByWeight 0) nil }}
+        <div class="featured-actions" style="display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;">
+          {{ if $first }}
+            <a href="{{ $first.RelPermalink }}" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;background:linear-gradient(135deg,#ff9944,#ff7722);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;">Start Reading →</a>
+          {{ end }}
+          <a href="{{ .RelPermalink }}" class="btn" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;background:#f6f6f6;color:#333;border-radius:10px;text-decoration:none;font-weight:600;">View Book</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
   <section class="books-grid">
     <h2 class="section-title">Books</h2>
     <div class="grid">
