@@ -1,6 +1,7 @@
 ---
 title: "About"
 description: "Dual Classics is a family project by Christian and Lyndsy Rodgers—kid‑friendly bilingual retellings of public‑domain classics for families and classrooms."
+cover: "https://imagedelivery.net/uoQWLs2DQGCKz-4i8TTorQ/22c12028-fec1-4d6e-6681-1c10e52fbd00/public"
 ---
 
 Dual Classics is a passion project by Christian and Lyndsy Rodgers—and it’s been close to our hearts since at least 2017, the year our twins were born. Living in Pasadena, California—just outside the bustle of Los Angeles—we’re two parents raising four children with curiosity, care, and creativity.

@@ -23,6 +23,18 @@ enableRobotsTXT = true
     # Optional: your Twitter handle without @ (uncomment and set)
     # twitter = "dualclassics"
 
+  [params.organization]
+    name = "Dual Classics"
+    streetAddress = "1034 N. Madison Ave."
+    addressLocality = "Pasadena"
+    addressRegion = "CA"
+    postalCode = "91104"
+    addressCountry = "US"
+    # Optional extras:
+    # logo = "https://.../logo.png"
+    # founders = ["Christian Rodgers", "Lyndsy Rodgers"]
+    # sameAs = ["https://dualclassics.com/"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

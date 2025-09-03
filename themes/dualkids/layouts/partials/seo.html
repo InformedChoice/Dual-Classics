@@ -52,12 +52,41 @@
 {{ end }}
 
 {{/* JSON-LD */}}
+{{ $orgp := $site.Params.organization }}
 {{ $org := dict
   "@context" "https://schema.org"
   "@type" "Organization"
   "name" $site.Title
   "url" $site.BaseURL
 }}
+{{ with (or $orgp.logo $site.Params.seo.defaultOGImage) }}
+  {{ $org = merge $org (dict "logo" .) }}
+{{ end }}
+{{ with $img }}
+  {{ $org = merge $org (dict "image" .) }}
+{{ end }}
+{{/* Postal address if provided */}}
+{{ if $orgp }}
+  {{ $addr := dict }}
+  {{ with $orgp.streetAddress }}{{ $addr = merge $addr (dict "streetAddress" .) }}{{ end }}
+  {{ with $orgp.addressLocality }}{{ $addr = merge $addr (dict "addressLocality" .) }}{{ end }}
+  {{ with $orgp.addressRegion }}{{ $addr = merge $addr (dict "addressRegion" .) }}{{ end }}
+  {{ with $orgp.postalCode }}{{ $addr = merge $addr (dict "postalCode" .) }}{{ end }}
+  {{ with $orgp.addressCountry }}{{ $addr = merge $addr (dict "addressCountry" .) }}{{ end }}
+  {{ if gt (len $addr) 0 }}
+    {{ $org = merge $org (dict "address" (merge (dict "@type" "PostalAddress") $addr)) }}
+  {{ end }}
+  {{ with $orgp.founders }}
+    {{ $f := slice }}
+    {{ range . }}
+      {{ $f = $f | append (dict "@type" "Person" "name" .) }}
+    {{ end }}
+    {{ $org = merge $org (dict "founder" $f) }}
+  {{ end }}
+  {{ with $orgp.sameAs }}
+    {{ $org = merge $org (dict "sameAs" .) }}
+  {{ end }}
+{{ end }}
 
 {{ if $p.IsHome }}
   {{ $web := dict
@@ -110,9 +139,13 @@
   <script type="application/ld+json">{{ $org | jsonify }}</script>
 {{ else }}
   {{/* Generic page (About, books index, etc.) */}}
+  {{ $pageType := "WebPage" }}
+  {{ if eq (lower $p.RelPermalink) "/about/" }}
+    {{ $pageType = "AboutPage" }}
+  {{ end }}
   {{ $page := dict
       "@context" "https://schema.org"
-      "@type" "WebPage"
+      "@type" $pageType
       "name" $p.Title
       "url" $url
       "description" $desc
@@ -120,7 +153,9 @@
       "inLanguage" (slice "en" "es")
       "publisher" (dict "@type" "Organization" "name" $site.Title)
   }}
+  {{ with $img }}
+    {{ $page = merge $page (dict "primaryImageOfPage" (dict "@type" "ImageObject" "url" .)) }}
+  {{ end }}
   <script type="application/ld+json">{{ $page | jsonify }}</script>
   <script type="application/ld+json">{{ $org | jsonify }}</script>
 {{ end }}
-
