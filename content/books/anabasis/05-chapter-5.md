@@ -3,6 +3,7 @@ title: "Chapter 5: Through the Desert"
 chapter: 5
 weight: 5
 summary: "The army crosses the Arabian desert, hunting wild animals and struggling to find food."
+aliases: ["/books/books/anabasis/chapter-5-through-the-desert/"]
 ---
 
 {{< bp >}}
