@@ -12,6 +12,10 @@ Kid‑friendly, colorful Hugo site for reading public‑domain classics retold i
 
 ## Content model
 
+- Future book adaptations should follow `BOOK_ADAPTATION_GUIDELINES.md`.
+  Adapt the faithful child-readable English first from public-domain or
+  permitted source material, then create the Spanish after the English is
+  completed.
 - Books live under `content/books/<slug>/`.
 - Each book has an `_index.md` with metadata, and chapter files like `01-chapter-1.md` with `chapter` and `weight` for ordering.
 - Partial books work fine — publish chapters as you finish them. If you set `plannedChapters` in the book, the list shows progress.

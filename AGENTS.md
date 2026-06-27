@@ -9,6 +9,12 @@ This repo hosts a custom Hugo site for kid‑friendly, bilingual (EN + ES) class
 
 ## Tasks
 
+0) Book adaptation standard
+- Treat `BOOK_ADAPTATION_GUIDELINES.md` as the controlling content standard for all future books.
+- For future books, create the faithful child-readable English first. Create Spanish only after the English for that chapter, section, or book is completed.
+- The next planned book is Caesar's Commentaries; apply the Caesar-specific notes in `BOOK_ADAPTATION_GUIDELINES.md`.
+- Keep all committed content grounded in public-domain source material or text the user has permission to use.
+
 1) Add a new book
 - Create book folder and index:
   - `hugo new books/<slug>/_index.md`

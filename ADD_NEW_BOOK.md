@@ -1,5 +1,10 @@
 # How to Add a New Book to Dual Classics
 
+Before adapting any new book content, follow
+`BOOK_ADAPTATION_GUIDELINES.md`. Future books should be adapted in English
+first from public-domain or permitted source material; create the Spanish after
+the English version for the relevant chapter, section, or book is completed.
+
 ## Quick Start - Adding a New Book
 
 ### 1. Create the book folder and metadata file

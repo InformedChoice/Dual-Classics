@@ -9,6 +9,13 @@ This repo hosts a custom Hugo site for kid‑friendly, bilingual (EN + ES) class
 
 ## Tasks
 
+0. Book adaptation standard
+
+- Treat `BOOK_ADAPTATION_GUIDELINES.md` as the controlling content standard for all future books.
+- For future books, create the faithful child-readable English first. Create Spanish only after the English for that chapter, section, or book is completed.
+- The next planned book is Caesar's Commentaries; apply the Caesar-specific notes in `BOOK_ADAPTATION_GUIDELINES.md`.
+- Keep all committed content grounded in public-domain source material or text the user has permission to use.
+
 1. Add a new book
 
 - **See ADD_NEW_BOOK.md for detailed instructions with examples**
@@ -64,6 +71,7 @@ GitHub Pages
 ## Conventions
 
 - Use simple sentences and short paragraphs.
-- Include pronunciation hints on first mention: `Cyrus (SY-rus)`.
+- Use `BOOK_ADAPTATION_GUIDELINES.md` for fidelity, age-appropriate adaptation, violence, sexual material, moral complexity, and source/copyright rules.
+- Use the `name` shortcode for committed pronunciation hints so they participate in the Pronunciation On/Off toggle.
 - If a book is partial, set `status: in-progress` and `plannedChapters` to show progress.
 - Use numeric prefixes on chapter filenames for stable sort, and set `weight` to match the chapter number.
