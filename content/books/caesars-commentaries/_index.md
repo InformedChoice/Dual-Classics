@@ -13,4 +13,4 @@ whyClassic: "Caesar's Commentaries shaped how later generations understood Rome,
 
 This book is being prepared under the main adaptation rules in `BOOK_ADAPTATION_GUIDELINES.md`.
 
-The English adaptation comes first. The Spanish version will be created after each English chapter or section is completed and ready to translate.
+The English adaptation comes first. Spanish is added after each English chapter or section is completed and ready to translate.

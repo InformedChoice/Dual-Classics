@@ -93,7 +93,7 @@ Set both `chapter` and `weight` to the same integer.
 
 - Book shell created: `content/books/caesars-commentaries/_index.md`
 - Cover asset created: `static/images/books/caesars-commentaries-cover.png`
-- Published English-first chapters created:
+- Published bilingual chapters created:
   - `01-chapter-1.md`: Gallic War, Book I, section 1.
   - `02-chapter-2.md`: Gallic War, Book I, sections 2-3.
   - `03-chapter-3.md`: Gallic War, Book I, sections 4-7.
@@ -109,4 +109,4 @@ Set both `chapter` and `weight` to the same integer.
   - `13-chapter-13.md`: Gallic War, Book I, sections 27-29.
 - Stopped before Gallic War, Book I, section 30, where ambassadors from across
   Gaul come to congratulate Caesar and request a council.
-- Spanish has not been added yet.
+- Spanish has been added for chapters 1-13.
